@@ -1,0 +1,20 @@
+header {
+    background-color: #ffffff;
+}
+
+header h1 {
+    padding: 2%;
+}
+
+h2, h3 {
+    background-color: #dddddd;
+    margin-top: 4%;
+}
+
+h3:first-child {
+    margin-top: 0%;
+}
+
+main {
+    padding-left: 2%;
+}
