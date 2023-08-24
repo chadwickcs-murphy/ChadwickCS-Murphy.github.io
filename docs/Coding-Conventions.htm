@@ -1,0 +1,3370 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="Coding-Conventions_files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Murphy</o:Author>
+  <o:LastAuthor>Scott Murphy</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>996</o:TotalTime>
+  <o:Created>2023-08-24T20:34:00Z</o:Created>
+  <o:LastSaved>2023-08-24T20:44:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2462</o:Words>
+  <o:Characters>14034</o:Characters>
+  <o:Lines>116</o:Lines>
+  <o:Paragraphs>32</o:Paragraphs>
+  <o:CharactersWithSpaces>16464</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=dataStoreItem href="Coding-Conventions_files/item0006.xml"
+target="Coding-Conventions_files/props007.xml">
+<link rel=themeData href="Coding-Conventions_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Coding-Conventions_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>120</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:.5in;
+	text-indent:0in;
+	page-break-before:always;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l0 level1 lfo2;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-indent:0in;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo2;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;}
+h3
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	text-indent:0in;
+	line-height:106%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l0 level3 lfo2;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:12.0pt;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#0563C1;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"List Paragraph Char";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"List Paragraph Char";
+	mso-style-type:export-only;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"List Paragraph Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"List Paragraph Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoBibliography, li.MsoBibliography, div.MsoBibliography
+	{mso-style-noshow:yes;
+	mso-style-priority:37;
+	mso-style-next:Normal;
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{mso-style-noshow:yes;
+	mso-style-priority:39;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	line-height:106%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	font-weight:bold;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.ListParagraphChar
+	{mso-style-name:"List Paragraph Char";
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"List Paragraph";
+	mso-ansi-font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;}
+span.CodeChar
+	{mso-style-name:"Code Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Code;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.Code, li.Code, div.Code
+	{mso-style-name:Code;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Code Char";
+	margin-top:0in;
+	margin-right:.5in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+span.BulletChar
+	{mso-style-name:"Bullet Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"List Paragraph Char";
+	mso-style-link:Bullet;
+	mso-ansi-font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;}
+p.Bullet, li.Bullet, div.Bullet
+	{mso-style-name:Bullet;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"List Paragraph";
+	mso-style-link:"Bullet Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	mso-list:l2 level1 lfo4;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.StyleBox, li.StyleBox, div.StyleBox
+	{mso-style-name:"Style Box";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:8.0pt;
+	margin-right:1.0in;
+	margin-bottom:8.0pt;
+	margin-left:1.5in;
+	text-align:center;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	font-style:italic;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:0pt;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:601180961;
+	mso-list-template-ids:1152272158;}
+@list l0:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;}
+@list l0:level3
+	{mso-level-style-link:"Heading 3";
+	mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;}
+@list l0:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;}
+@list l0:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;}
+@list l0:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;}
+@list l0:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;}
+@list l0:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;}
+@list l0:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;}
+@list l1
+	{mso-list-id:749351512;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1365891226 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:1541354106;
+	mso-list-type:hybrid;
+	mso-list-template-ids:571408262 2022364122 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:Bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='tab-interval:.5in;
+word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='margin-left:0in;text-align:center'><span
+style='font-size:20.0pt;mso-bidi-font-size:18.0pt;line-height:106%'>Java Coding
+Conventions<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:0in;text-align:center'><span
+style='font-size:20.0pt;mso-bidi-font-size:18.0pt;line-height:106%'>Post-AP
+Software Engineering<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:0in;text-align:center'><span
+style='font-size:20.0pt;mso-bidi-font-size:18.0pt;line-height:106%'>2023-2024<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ .1in .1in .1in .1in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=558 valign=top style='width:418.25pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal align=center style='margin-top:8.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center;line-height:normal'><b><i>Why
+  Have Code Conventions<o:p></o:p></i></b></p>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'><b><i><o:p>&nbsp;</o:p></i></b></p>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'><i>Code conventions are important to
+  programmers for a number of reasons:<o:p></o:p></i></p>
+  <p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;mso-add-space:
+  auto;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol;mso-bidi-font-style:italic'><span style='mso-list:Ignore'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><i>80% of the lifetime cost of a piece of software
+  goes to maintenance.<o:p></o:p></i></p>
+  <p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;mso-add-space:
+  auto;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol;mso-bidi-font-style:italic'><span style='mso-list:Ignore'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><i>Hardly any software is maintained for its
+  whole life by the original author.<o:p></o:p></i></p>
+  <p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;mso-add-space:
+  auto;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol;mso-bidi-font-style:italic'><span style='mso-list:Ignore'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><i>Code conventions improve the readability of
+  the software, allowing engineers to understand new code more quickly and
+  thoroughly.<o:p></o:p></i></p>
+  <p class=MsoListParagraphCxSpLast style='margin-bottom:0in;mso-add-space:
+  auto;text-indent:-.25in;line-height:normal;mso-list:l1 level1 lfo6'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol;mso-bidi-font-style:italic'><span style='mso-list:Ignore'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><i>If you ship your source code as a product,
+  you need to make sure it is as well packaged and clean as any other product
+  you create.<o:p></o:p></i></p>
+  <p class=MsoNormal align=right style='margin-top:8.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:right;line-height:normal;
+  tab-stops:right 451.5pt'><w:Sdt Citation="t" ID="658424374"><!--[if supportFields]><span
+   style='mso-element:field-begin'></span><span
+   style='mso-spacerun:yes'> </span>CITATION Sun99 \l 1033 <span
+   style='mso-element:field-separator'></span><![endif]--><span
+   style='mso-no-proof:yes'>[1]</span><!--[if supportFields]><span
+   style='mso-element:field-end'></span><![endif]--></w:Sdt></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b>This document serves as the Post-AP Software Engineering
+coding standards for source code written in the Java programming language.<span
+style='mso-spacerun:yes'>  </span>Java source code is considered standards
+compliant only if it adheres to these coding standards.<o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This document is created largely in conformance with <i>Java
+Code Conventions</i> <w:Sdt Citation="t" ID="1581483165"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span><span
+ style='mso-spacerun:yes'> </span>CITATION Sun99 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'>[1]</span><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></w:Sdt>
+and the <i>Google Java Style Guide</i> <w:Sdt Citation="t" ID="392393843"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span><span
+ style='mso-spacerun:yes'> </span>CITATION Goo22 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'>[2]</span><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></w:Sdt>,
+along with guidance from <i>Elements of Style</i> <w:Sdt Citation="t"
+ ID="-555555252"><!--[if supportFields]><span style='mso-element:field-begin'></span><span
+ style='mso-spacerun:yes'> </span>CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'>[3]</span><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></w:Sdt>
+and <i>The Elements of Java Style</i> <w:Sdt Citation="t" ID="-184054839"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span><span
+ style='mso-spacerun:yes'> </span>CITATION Ver00 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'>[4]</span><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--></w:Sdt>.<span
+style='mso-spacerun:yes'>  </span>This document does not cover all the elements
+of the Java programming language but does cover the elements most commonly
+used.</p>
+
+<w:Sdt SdtDocPart="t" DocPartType="Table of Contents" DocPartUnique="t"
+ ID="-461651835">
+ <h1 style='margin-left:1.0in;text-indent:-.5in;mso-list:none'><a
+ name="_Toc116986633">Contents</a><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> TOC \o &quot;1-1&quot; \h \z \u <span
+ style='mso-element:field-separator'></span><![endif]--><span style='font-size:
+ 12.0pt;mso-bidi-font-size:11.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+ minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ font-weight:normal'><w:sdtPr></w:sdtPr></span></h1>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986634"><span style='mso-no-proof:yes'>1.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>Source
+ Files</span><span style='color:windowtext;display:none;mso-hide:screen;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986634 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>3<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600330034000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986635"><span style='mso-no-proof:yes'>2.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>Formatting</span><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986635 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600330035000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986636"><span style='mso-no-proof:yes'>3.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>Comments</span><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986636 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>6<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600330036000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986637"><span style='mso-no-proof:yes'>4.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>Declarations</span><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986637 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>8<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600330037000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986638"><span style='mso-no-proof:yes'>5.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>Statements</span><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986638 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>9<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600330038000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986639"><span style='mso-no-proof:yes'>6.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>Whitespace</span><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986639 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>12<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600330039000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986640"><span style='mso-no-proof:yes'>7.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>Naming
+ Conventions</span><span style='color:windowtext;display:none;mso-hide:screen;
+ mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986640 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>14<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600340030000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoToc1 style='margin-left:.5in;tab-stops:58.5pt right dotted 467.5pt'><a
+ href="#_Toc116986641"><span style='mso-no-proof:yes'>8.</span><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ color:windowtext;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+ style='mso-tab-count:1'>      </span></span><span style='mso-no-proof:yes'>References</span><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'><span style='mso-element:field-begin'></span>
+ PAGEREF _Toc116986641 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+ style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+ text-decoration:none;text-underline:none'>16<!--[if gte mso 9]><xml>
+  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100310036003900380036003600340031000000</w:data>
+ </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+ display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+ none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+ style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
+ mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-latin;
+ mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ mso-no-proof:yes'><o:p></o:p></span></p>
+ <p class=MsoNormal><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><o:p>&nbsp;</o:p></p>
+</w:Sdt>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><a name="_Toc116986634"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Source Files</a></h1>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>1.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>File Name</h2>
+
+<p class=MsoNormal>The source file name consists of the case-sensitive name of the
+top-level (non-nested) class it contains (of which there is exactly one), plus
+the <span class=CodeChar>.java</span> extension.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>1.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>File Structure</h2>
+
+<p class=MsoNormal>A source file consists of, in order:</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>License or copyright information if present</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Package statement</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Import statements</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Class/interface documentation comment</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Exactly one top-level (non-nested) class</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>1.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Import Statements</h2>
+
+<p class=MsoNormal>Wildcard inputs, static or otherwise, are not used.</p>
+
+<p class=MsoNormal>All static imports are in a single block, followed by a
+blank line, followed by all non-static imports in a single block.<span
+style='mso-spacerun:yes'>  </span>Each block is sorted alphabetically.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>1.4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Class Structure</h2>
+
+<p class=MsoNormal>The contents of a class or interface should appear in the
+following order:</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Class (static) variables</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Instance variables</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Constructors</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Methods</p>
+
+<p class=MsoNormal>Methods should appear in some form of a logical order.<span
+style='mso-spacerun:yes'>  </span>(Alphabetical or chronological are not
+logical orders.)<span style='mso-spacerun:yes'>  </span>Typically, higher-level
+methods appear before the lower-level methods they rely on. The goal is to use
+an order that makes reading and understanding (i.e., learning) the code easier.</p>
+
+<p class=MsoNormal>All overloaded methods should appear in a single contiguous
+group, with no other methods in between.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><a name="_Toc116986635"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Formatting</a></h1>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>2.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Indentation</h2>
+
+<p class=MsoNormal>Each time a new block or block-like construct is opened, the
+indent increases by four spaces. When the block ends, the indent returns to the
+previous indent level. The indent level applies to both code and comments
+throughout the block.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>2.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>One Statement per Line</h2>
+
+<p class=MsoNormal>Each statement is followed by a line break.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>2.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Line Length</h2>
+
+<p class=MsoNormal>Avoid lines longer than 100 characters so that the entire
+line can be seen without horizontal scrolling.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>2.4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Line Wrapping</h2>
+
+<p class=MsoNormal>When code that might otherwise legally occupy a single line
+is divided into multiple lines, this activity is called <em><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi'>line-wrapping</span></em><em><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-style:normal'>.<span
+style='mso-spacerun:yes'>  </span></span></em>Two considerations for line
+wrapping are where to break the line and where to start the next line.</p>
+
+<p class=MsoNormal>Break according to these general principles:</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Break after a comma.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Break before an operator.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Prefer higher-level breaks to lower-level
+breaks.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Keep a method attached to its open parenthesis.</p>
+
+<p class=MsoNormal>Start the next line according to these general principles:</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Indent from the original line at least 8 spaces
+(two indentations).</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Align the new line with the beginning of the
+expression at the same level on the previous line.</p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>Note:</span></strong><span
+style='mso-spacerun:yes'>  </span>The primary goal for line wrapping is to have
+clear code, <em><span style='font-family:"Arial",sans-serif;mso-bidi-font-family:
+"Times New Roman";mso-bidi-theme-font:minor-bidi'>not necessarily</span></em>
+code that fits in the smallest number of lines.</p>
+
+<p class=Bullet style='mso-list:none'>Example line wrapping:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>//
+Align on assignment operator</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>longName1
+= longName2 * (longName3 + longName4 </p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>            </span>– longName5) + 4 * longname6;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>//
+Align on open parenthesis</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>someMethod(int
+anArg, Object anotherArg,</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>           </span>String yetAnotherArg,</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>           </span>Object andStillAnother) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>...</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>//
+Align on 8-space indendation</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>private
+synchronized horkingLongMethodName(int anArg,</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>Object anotherArg, String
+yetAnotherArg,</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>Object andStillAnother) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>...</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>//
+Align on open parenthesis</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>var
+= function1(longExpression1,</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>                </span>function2(longExpression2,</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>                          </span>longExpression3));</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>//
+Align on 8-space indendation</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>if ((condition1
+&amp;&amp; condition2)</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>|| (condition3 &amp;&amp; condition4) </p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>||!(condition5 &amp;&amp; condition6))
+{</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>doSomethingAboutIt();</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><a name="_Toc116986636"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Comments</a></h1>
+
+<p class=MsoNormal>Java programs can have two kinds of comments:<span
+style='mso-spacerun:yes'>  </span>implementation comments and documentation
+comments.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>3.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Implementation Comments</h2>
+
+<p class=MsoNormal>Implementation comments should provide information related
+to the code that is not readily available in the code itself, such as
+information about nontrivial or nonobvious coding.<span
+style='mso-spacerun:yes'>  </span>Comments should contain only information that
+is relevant to reading and understanding the program.<span
+style='mso-spacerun:yes'>  </span>Comments should not duplicate information
+that is present in, and clear from, the code.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Add internal comments only if they will <br>
+aid others in understanding your code.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="515043529"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ver00 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[4]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Describe <u>why</u> the code is doing what it does, <br>
+not <u>what</u> the code is doing.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="1025439918"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ver00 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[4]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>Make sure comments
+and code agree.<span style='font-style:normal'><w:Sdt Citation="t"
+ ID="1067074545"><!--[if supportFields]><span style='mso-element:field-begin'></span>
+ CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>Don't comment bad
+code—rewrite it.<span style='font-style:normal'><w:Sdt Citation="t"
+ ID="-2119670327"><!--[if supportFields]><span style='mso-element:field-begin'></span>
+ CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-indent:0in;mso-list:l0 level3 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>3.1.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]>Block Comments</h3>
+
+<p class=MsoNormal>Block comments are indented to the same level as the
+surrounding code (typically the code following the comment).<span
+style='mso-spacerun:yes'>  </span>Block comments can be single- or
+multi-line.<span style='mso-spacerun:yes'>  </span>Precede a block comment with
+a blank line.</p>
+
+<p class=MsoNoSpacing>Block comments can use the <span class=CodeChar>/* ... */</span>
+style or the <span class=CodeChar>// ... </span>style.<span
+style='mso-spacerun:yes'>  </span>For multi-line <span class=CodeChar>/* ... */</span>
+comments, subsequent lines must start with <span class=CodeChar>*</span>
+aligned with <span class=CodeChar>*</span> on the previous line. </p>
+
+<p class=MsoNoSpacing><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>/*</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'> </span>* This is</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'> </span>* okay.</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'> </span>*/</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>//
+And so</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>//
+is this.</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>/*
+You can</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'> </span>* also do this. */</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3 style='text-indent:0in;mso-list:l0 level3 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>3.1.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]>End-line Comments</h3>
+
+<p class=MsoNormal>Short comments can appear on the same line as the code they
+describe.<span style='mso-spacerun:yes'>  </span>If an end-line comment causes
+the line to need to be wrapped, the comment should appear before the code.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>3.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Documentation Comments</h2>
+
+<p class=MsoNormal>Documentation comments are also known as Javadoc
+comments.<span style='mso-spacerun:yes'>  </span>Every <span class=CodeChar>public</span>
+class, and every <span class=CodeChar>public</span> and <span class=CodeChar>protected</span>
+method within such a class, should have a Javadoc comment.<span
+style='mso-spacerun:yes'>  </span>The Javadoc comment should appear just before
+the declaration and should use the standard delimiters <span class=CodeChar>/**
+... */</span> with subsequent lines starting with <span class=CodeChar>*</span>
+aligned with <span class=CodeChar>*</span> on the previous line.<span
+style='mso-spacerun:yes'>  </span>The standard tags should appear in the order <span
+class=CodeChar>@param</span>, <span class=CodeChar>@return</span>, and <span
+class=CodeChar>@throws</span>.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><a name="_Toc116986637"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Declarations</a></h1>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>4.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Number per Line</h2>
+
+<p class=MsoNormal>Every variable declaration (instance or local) declares only
+one variable: declarations such as <span class=CodeChar>int a, b;</span> are
+not used.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>4.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Placement</h2>
+
+<p class=MsoNormal>Local variables are <strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>not</span></strong>
+habitually declared at the start of their containing block.<span
+style='mso-spacerun:yes'>  </span>Instead, local variables are declared close
+to the point they are first used (within reason), to minimize their scope.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>4.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Initialization</h2>
+
+<p class=MsoNormal>Try to initialize local variables where they are declared.
+The only reason not to initialize a variable where it’s declared is if the
+initial value depends on some computation occurring first.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><a name="_Toc116986638"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Statements</a></h1>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Simple Statements</h2>
+
+<p class=MsoNormal>Each line should contain at most one statement.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Compound Statements</h2>
+
+<p class=MsoNormal>Compound statements are statements that contain lists of
+statements enclosed in braces “<span style='font-family:"Courier New"'>{
+statements }</span>”.<span style='mso-spacerun:yes'>  </span>See the following
+sections for examples.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The enclosed statements should be indented one
+more level than the compound statement.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The opening brace should be at the end of the
+line that begins the compound statement; the closing brace should begin a line
+and be indented to the beginning of the compound statement.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Braces are used around all statements, even
+singletons, when they are part of a control structure, such as an <span
+style='font-family:"Courier New"'>if-else </span>or <span style='font-family:
+"Courier New"'>for</span> statement.<span style='mso-spacerun:yes'> 
+</span>This makes it easier to add statements without accidentally introducing
+bugs due to forgetting to add braces.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i>return</i> Statements</h2>
+
+<p class=MsoNormal>A <span style='font-family:"Courier New"'>return</span>
+statement with a value should not use parentheses unless they make the return
+value more obvious in some way.<span style='mso-spacerun:yes'>  </span>Example:</p>
+
+<p class=Code>return;</p>
+
+<p class=Code><o:p>&nbsp;</o:p></p>
+
+<p class=Code>return myDisk.size();</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>if, if-else, if-else-if-else Statements</h2>
+
+<p class=MsoNormal>The <span style='font-family:"Courier New"'>if-else</span>
+class of statements should have the following form:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>if (<i>condition</i>)
+{</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>if (<i>condition</i>)
+{</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}
+else {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>if (<i>condition</i>)
+{</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}
+else if (<i>condition</i>) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><i><span
+style='mso-spacerun:yes'>    </span>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}
+else {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><i><span
+style='mso-spacerun:yes'>    </span>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i>for</i> Statements</h2>
+
+<p class=MsoNormal>A <span style='font-family:"Courier New"'>for</span>
+statement should have the following form:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>for
+(<i>initialization</i>; <i>condition</i>; <i>update</i>) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>for
+(<i>type</i> <i>variable</i> : <i>collection</i>) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i>while</i> Statements</h2>
+
+<p class=MsoNormal>A while statement should have the following form:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>while
+(<i>condition</i>) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i>do-while</i> Statements</h2>
+
+<p class=MsoNormal>A <span style='font-family:"Courier New"'>do-while </span>statement
+should have the following form:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>do {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}
+while (<i>condition</i>);</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i>switch</i> Statements</h2>
+
+<p class=MsoNormal>A <span style='font-family:"Courier New"'>switch</span> statement
+should have the following form:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>switch
+(<i>input</i>) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>case 1:</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>case 2:</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>// fall through</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>case 3:</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>break;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>case 4:</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>break;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span>default:</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>        </span>break;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+</div>
+
+<p class=MsoNormal style='margin-left:0in;text-indent:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Every time a case falls through (doesn’t include a <span
+style='font-family:"Courier New"'>break</span> statement), add a comment where
+the <span style='font-family:"Courier New"'>break</span> statement would
+normally be.<span style='mso-spacerun:yes'>  </span>This is shown in the
+preceding code example with the <span style='font-family:"Courier New"'>// fall
+through</span> comment.</p>
+
+<p class=MsoNormal>Every <span style='font-family:"Courier New"'>switch</span>
+statement should include a default case.<span style='mso-spacerun:yes'> 
+</span>The <span style='font-family:"Courier New"'>break</span> in the default
+case is redundant, but it prevents a fall-through error if later another <span
+style='font-family:"Courier New"'>case</span> is added.</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>5.9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><i>try-catch</i> Statements</h2>
+
+<p class=MsoNormal>A <span style='font-family:"Courier New"'>try-catch </span>statement
+should have the following format:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:.5in'>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>try
+{</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}
+catch (ExceptionClass e) {</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+style='mso-spacerun:yes'>    </span><i>statements</i>;</p>
+
+<p class=Code style='margin:0in;margin-bottom:.0001pt;border:none;mso-border-alt:
+solid windowtext .5pt;padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'>}</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><a name="_Toc116986639"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Whitespace</a></h1>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>6.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Blank Lines</h2>
+
+<p class=MsoNormal>Blank lines improve readability by setting off sections of
+code that are logically related.</p>
+
+<p class=MsoNormal>Two blank lines should always be used in the following
+circumstances:</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Between sections of a source file</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Between class and interface definitions</p>
+
+<p class=MsoNormal>One blank line should always be used in the following
+circumstances:</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Between methods</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Between the local variables in a method and its
+first statement</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Before a block or single-line comment</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Between logical sections inside a method to
+improve readability</p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>6.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Blank Spaces</h2>
+
+<p class=MsoNormal>Blank spaces should be used in the following circumstances:</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>A keyword followed by a parenthesis should be
+separated by a space.<span style='mso-spacerun:yes'>  </span>Example:</p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>while
+(!done) {<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span><span
+style='mso-spacerun:yes'>    </span>...<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>} <o:p></o:p></span></p>
+
+<p class=Code><o:p>&nbsp;</o:p></p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Note that a blank space should not be used
+between a method name and its opening parenthesis.<span
+style='mso-spacerun:yes'>  </span>This helps to distinguish keywords from
+method calls.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>A blank space should appear after commas in
+argument lists.</p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>All binary operators except <span
+class=CodeChar>.</span> should be separated from their operands by spaces.<span
+style='mso-spacerun:yes'>  </span>Blank spaces should never separate unary
+operators such as unary minus, increment (“<span class=CodeChar>++</span>”),
+and decrement (“<span class=CodeChar>--</span>”) from their operands.<span
+style='mso-spacerun:yes'>  </span>Example:</p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>a
++= c + d;<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>a
+= (a + b) / (c * d);<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>while
+(n &lt; 10) {<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span><span
+style='mso-spacerun:yes'>    </span>n++;<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>}<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>prints(&quot;size
+is &quot; + foo + &quot;\n&quot;);<o:p></o:p></span></p>
+
+<p class=Code><o:p>&nbsp;</o:p></p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The expressions in a <span class=CodeChar>for</span>
+statement should be separated by blank spaces.<span style='mso-spacerun:yes'> 
+</span>Example:</p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>for
+(expr1; expr2; expr3)<o:p></o:p></span></p>
+
+<p class=Code><o:p>&nbsp;</o:p></p>
+
+<p class=Bullet style='mso-list:l2 level1 lfo4'><![if !supportLists]><span
+style='mso-bidi-font-size:12.0pt;line-height:106%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Casts should be followed by a blank.<span
+style='mso-spacerun:yes'>  </span>Examples:<span style='mso-bidi-font-size:
+12.0pt;line-height:106%;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>myMethod((byte)
+aNum, (Object) x);<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><span style='mso-tab-count:1'>     </span>myFunc((int)
+(cp + 5), ((int) (i + 3)) + 1);<o:p></o:p></span></p>
+
+<p class=Code><span class=CodeChar><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><a name="_Toc116986640"><o:p>&nbsp;</o:p></a></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><span style='mso-bookmark:
+_Toc116986640'><![if !supportLists]><span style='mso-fareast-font-family:Arial;
+mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Naming Conventions</span></h1>
+
+<p class=MsoNormal>Naming conventions make programs more understandable by
+making them easier to read.<span style='mso-spacerun:yes'>  </span>They can also
+give information about the function, or the purpose, of the identifier—for
+example, whether it’s a constant, package, or class—which can be helpful in
+understanding the code.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>Use variable names
+that mean something.<span style='font-style:normal'><w:Sdt Citation="t"
+ ID="1681156331"><!--[if supportFields]><span style='mso-element:field-begin'></span>
+ CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Use familiar names.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="539937105"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ver00 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[4]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>Choose variable
+names that won't be confused.<span style='font-style:normal'><w:Sdt Citation="t"
+ ID="1395858161"><!--[if supportFields]><span style='mso-element:field-begin'></span>
+ CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Capitalize only the first letter in an acronym.<span
+style='font-style:normal'><w:Sdt Citation="t" ID="-11232865"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ver00 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[4]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The conventions given in this section are high level.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:.5in;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:.1in .1in .1in .1in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=197 valign=top style='width:147.55pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal align=center style='margin-top:8.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center;line-height:normal'><b>Identifier
+  Type<o:p></o:p></b></p>
+  </td>
+  <td width=367 valign=top style='width:275.2pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal align=center style='margin-top:8.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center;line-height:normal'><b>Rules
+  for Naming<o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=197 valign=top style='width:147.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Classes</p>
+  </td>
+  <td width=367 valign=top style='width:275.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Class names are typically nouns or
+  noun phrases, in mixed case with the first letter of each internal word
+  capitalized (UpperCamelCase).<span style='mso-spacerun:yes'>  </span>Try to
+  keep your class names simple and descriptive. Use whole words—avoid acronyms
+  and abbreviations (unless the abbreviation is much more widely used than the
+  long form, such as URL or HTML).<span style='mso-spacerun:yes'> 
+  </span>Example:</p>
+  <p class=Code style='margin-left:0in'><o:p>&nbsp;</o:p></p>
+  <p class=Code style='margin-left:0in'>public class Student<span
+  style='mso-bidi-font-size:11.0pt;font-family:"Arial",sans-serif;mso-bidi-font-family:
+  "Times New Roman";mso-bidi-theme-font:minor-bidi'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=197 valign=top style='width:147.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Interfaces</p>
+  </td>
+  <td width=367 valign=top style='width:275.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Interface names should be capitalized
+  like class names.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=197 valign=top style='width:147.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Methods</p>
+  </td>
+  <td width=367 valign=top style='width:275.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Methods are typically verbs or verb
+  phrases, in mixed case with the first letter of each internal word
+  capitalized (lowerCamelCase).<span style='mso-spacerun:yes'> 
+  </span>Examples:</p>
+  <p class=Code style='margin-left:0in'><o:p>&nbsp;</o:p></p>
+  <p class=Code style='margin-left:0in'>getArea();</p>
+  <p class=Code style='margin-left:0in'>isEmpty();<span style='mso-bidi-font-size:
+  11.0pt;font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=197 valign=top style='width:147.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Variables</p>
+  </td>
+  <td width=367 valign=top style='width:275.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Except for class constants, all
+  instance, class, parameter, and local variables are in mixed case with a
+  lowercase first letter. Internal words start with capital letters
+  (lowerCamelCase).</p>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Variable names should be short yet
+  meaningful.<span style='mso-spacerun:yes'>  </span>The choice of a variable
+  name should be designed to indicate to the casual observer the intent of its
+  use.<span style='mso-spacerun:yes'>  </span>One-character variable names
+  should be avoided except for temporary “throwaway” variables.<span
+  style='mso-spacerun:yes'>  </span>Common names for temporary variables are i,
+  j, k, m, and n for integers; c, d, and e for characters.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=197 valign=top style='width:147.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>Constants</p>
+  </td>
+  <td width=367 valign=top style='width:275.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.1in .1in .1in .1in'>
+  <p class=MsoNormal style='margin-top:8.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;line-height:normal'>The names of variables declared as
+  class constants and should be all uppercase with words separated by
+  underscores (UPPER_SNAKE_CASE).<span style='mso-spacerun:yes'> 
+  </span>Example:</p>
+  <p class=Code style='margin-left:0in'><span class=CodeChar><o:p>&nbsp;</o:p></span></p>
+  <p class=Code style='margin-left:0in'><span class=CodeChar>static final int
+  MIN_WIDTH = 4;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Style Guidelines</h1>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>8.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Algorithms</h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Write clearly – don't be too clever.<span style='font-style:
+normal'><w:Sdt Citation="t" ID="-1075962405"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Say what you mean, simply and directly.<span style='font-style:
+normal'><w:Sdt Citation="t" ID="-895749289"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Write clearly – don't sacrifice clarity for efficiency.<span
+style='font-style:normal'><w:Sdt Citation="t" ID="-1674800259"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Make it right before you make it faster.</p>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Make it fail-safe before you make it faster.</p>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Make it clear before you make it faster.</p>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Keep it simple to make it faster.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="1639218546"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>8.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Expressions</h2>
+
+<p class=MsoNormal>When working with expressions, make them
+understandable.<span style='mso-spacerun:yes'>  </span>This includes making
+good use of white space and line breaks, arranging the expression to reflect
+the logic, and using methods for repeated expressions.<span
+style='mso-spacerun:yes'>  </span>Also keep in mind that floating point expressions
+do not always calculate to the exact value we expect.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>Parenthesize to
+avoid ambiguity.<span style='font-style:normal'><w:Sdt Citation="t"
+ ID="1230883720"><!--[if supportFields]><span style='mso-element:field-begin'></span>
+ CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>If a logical
+expression is hard to understand, try transforming it.<span style='font-style:
+normal'><w:Sdt Citation="t" ID="1927231337"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>Replace repeated
+nontrivial expressions with equivalent methods.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="-475298301"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ver00 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[4]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>10.0 times 0.1 is hardly ever 1.0.<span style='font-style:
+normal'><w:Sdt Citation="t" ID="1454447734"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>7/8 is zero while 7.0/8.0 is not zero.<span style='font-style:
+normal'><w:Sdt Citation="t" ID="-745330233"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Don't compare floating point numbers solely for equality.<span
+style='font-style:normal'><w:Sdt Citation="t" ID="1709214471"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>8.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Testing</h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Don't stop at one bug.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="-1218892366"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Watch out for off-by-one errors.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="798882418"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Make sure your code does &quot;nothing&quot; gracefully.<span
+style='font-style:normal'><w:Sdt Citation="t" ID="-445925812"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Test programs at their boundary values.<span style='font-style:
+normal'><w:Sdt Citation="t" ID="-1310317342"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Check some answers by hand.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="-259528829"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='text-indent:0in;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>8.4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>User Interfaces</h2>
+
+<p class=MsoNormal>When your program interfaces with a user, the behavior of
+your program should not surprise the user.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Adhere to the Principle of Least Astonishment.<span
+style='font-style:normal'><w:Sdt Citation="t" ID="-1156611272"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ver00 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[4]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Plan on the user not inputting what you expect, so test
+input and respond accordingly.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'>Test input for plausibility and validity.<span
+style='font-style:normal'><w:Sdt Citation="t" ID="1314534787"><!--[if supportFields]><span
+ style='mso-element:field-begin'></span> CITATION Ker78 \l 1033 <span
+ style='mso-element:field-separator'></span><![endif]--><span style='mso-no-proof:
+ yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:1.5in;margin-right:1.0in'>
+
+<p class=StyleBox style='margin-top:8.0pt;margin-right:0in;margin-bottom:8.0pt;
+margin-left:0in'><span style='mso-spacerun:yes'>    </span>Make sure input
+doesn't violate the limits of the program.<span style='font-style:normal'><w:Sdt
+ Citation="t" ID="-1637865443"><!--[if supportFields]><span style='mso-element:
+ field-begin'></span> CITATION Ker78 \l 1033 <span style='mso-element:field-separator'></span><![endif]--><span
+ style='mso-no-proof:yes'><span style='mso-spacerun:yes'> </span>[3]</span><!--[if supportFields]><span
+ style='mso-element:field-end'></span><![endif]--></w:Sdt></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<w:Sdt SdtDocPart="t" DocPartType="Bibliographies" DocPartUnique="t"
+ ID="-1241938072">
+ <h1 style='text-indent:0in;mso-list:l0 level1 lfo2'><a name="_Toc116986641"><![if !supportLists]><span
+ style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+ style='mso-list:Ignore'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ </span></span></span><![endif]>References</a><span style='font-size:12.0pt;
+ mso-bidi-font-size:11.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+ minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;
+ font-weight:normal'><w:sdtPr></w:sdtPr></span></h1>
+ <w:Sdt Bibliography="t" ID="-573587230">
+  <p class=MsoNormal style='margin-left:0in'><!--[if supportFields]><span
+  style='mso-element:field-begin'></span><span
+  style='mso-spacerun:yes'> </span>BIBLIOGRAPHY <span style='mso-element:field-separator'></span><![endif]--><span
+  style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
+  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  "Times New Roman";mso-bidi-theme-font:minor-bidi;mso-no-proof:yes'><o:p></o:p></span><span
+  style='font-family:"Calibri",sans-serif;mso-ascii-font-family:Arial;
+  mso-hansi-font-family:Arial;mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi'><w:sdtPr></w:sdtPr></span></p>
+  <table class=MsoNormalTable border=0 cellpadding=0 width="100%"
+   style='width:100.0%;mso-cellspacing:1.5pt;margin-left:.5in;mso-yfti-tbllook:
+   1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width="1%" valign=top style='width:1.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>[1] </span><span
+    style='mso-bidi-font-size:12.0pt;line-height:106%;mso-no-proof:yes'><o:p></o:p></span></p>
+    </td>
+    <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>Sun Microsystems,
+    Inc., &quot;Java Code Conventions,&quot; 20 April 1999. [Online].
+    Available: https://www.oracle.com/docs/tech/java/codeconventions.pdf.
+    [Accessed 24 September 2022].<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width="1%" valign=top style='width:1.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>[2] <o:p></o:p></span></p>
+    </td>
+    <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>Google LLC,
+    &quot;Google Java Style Guide,&quot; [Online]. Available:
+    https://google.github.io/styleguide/javaguide.html. [Accessed 24 September
+    2022].<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width="1%" valign=top style='width:1.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>[3] <o:p></o:p></span></p>
+    </td>
+    <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>B. W. Kernighan and
+    P. J. Plauger, The Elements of Programming Style, 2nd ed., New York: McGraw
+    Hill, 1978. <o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+    <td width="1%" valign=top style='width:1.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>[4] <o:p></o:p></span></p>
+    </td>
+    <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoBibliography><span style='mso-no-proof:yes'>A. Vermeulen, S. W.
+    Ambler, G. Bumgardner, E. Metz, T. Misfeldt, J. Shur and P. Thompson, The
+    Elements of Java Style, Cambridge: Cambridge University Press, 2000. <o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
+  mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:1.0in'><!--[if supportFields]><b><span
+  style='mso-no-proof:yes'><span style='mso-element:field-end'></span></span></b><![endif]--><o:p>&nbsp;</o:p></p>
+ </w:Sdt></w:Sdt>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
