@@ -73,6 +73,38 @@
         <li><a href="https://processing.org/reference/rotate_.html" target="_blank">rotate</a>(<i>angle-in-radians)</i></li>
     </ul>
     <h5>Week 4</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard(event)">Starter Code</button>
+    <script>
+        function copyToClipboard(event) {
+            navigator.clipboard.writeText(
+                "float x = 100;\n" +
+                "float xSpeed = 2.5;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(500, 500);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#0000FF);\n" +
+                "\n" +
+                "  x = x + xSpeed;\n" +
+                "  if (x > width)\n" +
+                "  {\n" +
+                "    xSpeed = -xSpeed;\n" +
+                "  }\n" +
+                "  \n" +
+                "  circle(x, 100, 50);\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
     <ul>
         <li><a href="https://processing.org/reference/width.html" target="_blank">width</a>, <a href="https://processing.org/reference/height.html" target="_blank">height</a></li>
         <li>
@@ -87,6 +119,20 @@
             &nbsp;&nbsp;&nbsp;<i>code block that runs over and over after setup() runs;<br>
             &nbsp;&nbsp;&nbsp;the screen refreshes after this executes</i><br>
             }
+        </li>
+        <li><a href="https://processing.org/reference/if.html" target="_blank">if</a> (<i>test</i>)<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is true</i><br>
+            }<br>
+        </li>
+        <li><a href="https://processing.org/reference/if.html" target="_blank">if</a> (<i>test</i>)<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is true</i><br>
+            }<br>
+            <a href="https://processing.org/reference/else.html" target="_blank">else</a><br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is false</i><br>
+            }<br>
         </li>
     </ul>
     <!---
