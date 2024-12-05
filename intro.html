@@ -135,24 +135,67 @@
             }<br>
         </li>
     </ul>
-    <!---
-    <h5>Week 5</h5>
+    <h5>Week 10</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard(event)">Starter Code</button>
+    <script>
+        function copyToClipboard(event) {
+            navigator.clipboard.writeText(
+                "// *** Type your name here ***\n" +
+                "float shapeSize = 10;\n" +
+                "//float startRotation = 0;\n" +
+                "//float rotationSpeed = 0.01;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(1000, 1000);\n" +
+                "  background(#000000);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  square(mouseX, mouseY, shapeSize);\n" +
+                "}\n" +
+                "\n" +
+                "void mouseWheel(MouseEvent event)\n" +
+                "{\n" +
+                "  float e = event.getCount();\n" +
+                "  println(e);\n" +
+                "  shapeSize = shapeSize - e;\n" +
+                "  if (shapeSize < 10)\n" +
+                "  {\n" +
+                "    shapeSize = 10;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void mousePressed()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
     <ul>
         <li><a href="https://processing.org/reference/mouseX.html" target="_blank">mouseX</a>, <a href="https://processing.org/reference/mouseY.html" target="_blank">mouseY</a></li>
         <li>
             <a href="https://processing.org/reference/mouseWheel_.html" target="_blank">mouseWheel</a>(MouseEvent event)<br>
             {<br>
             &nbsp;&nbsp;&nbsp;float e = event.getCount();<br>
-            &nbsp;&nbsp;&nbsp;...<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs when the mouse wheel is moved</i><br>
             }
         </li>
         <li>
             <a href="https://processing.org/reference/mousePressed_.html" target="_blank">mousePressed</a>()<br>
             {<br>
-            &nbsp;&nbsp;&nbsp;...<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs when the mouse button is pressed</i><br>
             }
         </li>
     </ul>
+    <!--
     <h5>Week 7</h5>
     <ul>
         <li><a href="https://processing.org/reference/text_.html" target="_blank">text</a>(string, leftX, bottomY)</li>
@@ -169,7 +212,7 @@
         <li><a href="https://processing.org/reference/sin_.html" target="_blank">sin</a>(angle)</li>
         <li><a href="https://processing.org/reference/pow_.html" target="_blank">pow</a>(base, exponent)</li>
     </ul>
-    <--->
+    -->
 </main>
 </body>
 </html>
