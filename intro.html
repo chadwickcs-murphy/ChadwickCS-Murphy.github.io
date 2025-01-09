@@ -35,10 +35,266 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
-    <h5>Week 11</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard11(event)">Starter Code</button>
+    <h5>Week 13</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard13(event)">Starter Code</button>
     <script>
-        function copyToClipboard11(event) {
+        function copyToClipboard13(event) {
+            navigator.clipboard.writeText(
+                "// *** type your name here ***\n" +
+                "// type your name here\n" +
+                "\n" +
+                "boolean alive = true;\n" +
+                "\n" +
+                "float ballX = 200;\n" +
+                "float ballY = 200;\n" +
+                "float ballSpeedX = 3;\n" +
+                "float ballSpeedY = 3;\n" +
+                "float ballSize = 20;\n" +
+                "\n" +
+                "float paddleW = 100;\n" +
+                "float paddleH = 20;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(1000, 700);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "\n" +
+                "  // draw paddle\n" +
+                "  rect(mouseX - paddleW / 2, height - paddleH - 10, paddleW, paddleH);\n" +
+                "  \n" +
+                "  // draw blocks\n" +
+                "\n" +
+                "  // update ball location\n" +
+                "  ballY = ballY + ballSpeedY;\n" +
+                "  ballX = ballX + ballSpeedX;\n" +
+                "  \n" +
+                "  // check for ball hitting blocks\n" +
+                "\n" +
+                "  \n" +
+                "  bounceBallOffWall();\n" +
+                "  bounceBallOffPaddle();\n" +
+                "  \n" +
+                "  // draw ball\n" +
+                "  square(ballX, ballY, ballSize);\n" +
+                "}\n" +
+                "\n" +
+                "void mousePressed()\n" +
+                "{\n" +
+                "  ballSpeedX = 3;\n" +
+                "  ballSpeedY = 3;\n" +
+                "  ballX = 200;\n" +
+                "  ballY = 200;\n" +
+                "  alive = true;\n" +
+                "}\n" +
+                "\n" +
+                "/******************************************************************/\n" +
+                "/*********** Do not change code below this line. ******************/\n" +
+                "/******************************************************************/\n" +
+                "\n" +
+                "/**\n" +
+                " * Bounces ball off of wall if needed.\n" +
+                " */\n" +
+                "void bounceBallOffWall()\n" +
+                "{\n" +
+                "  if (ballY < 0) {                       // top of screen\n" +
+                "    ballY = 0;\n" +
+                "    ballSpeedY = -ballSpeedY;\n" +
+                "  } else if (ballY > height) {           // off bottom of screen\n" +
+                "    ballSpeedX = 0;\n" +
+                "    ballSpeedY = 0;\n" +
+                "    alive = false;\n" +
+                "  }\n" +
+                "\n" +
+                "  if (ballX < 0) {                       // left side of screen\n" +
+                "    ballX = 0;\n" +
+                "    ballSpeedX = -ballSpeedX;\n" +
+                "  } else if (ballX + ballSize > width) { // right side of screen\n" +
+                "    ballX = width - ballSize;\n" +
+                "    ballSpeedX = -ballSpeedX;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Bounces ball off of paddle if needed.\n" +
+                " */\n" +
+                "void bounceBallOffPaddle()\n" +
+                "{\n" +
+                "  if (!alive) { // don't bring ball back up\n" +
+                "    return;\n" +
+                "  }\n" +
+                "  \n" +
+                "  float paddleLeft = mouseX - paddleW / 2;\n" +
+                "  float paddleRight = mouseX + paddleW / 2;\n" +
+                "  float paddleTop = height - paddleH - 10;\n" +
+                "  boolean bounce = false;\n" +
+                "  \n" +
+                "  // look for overlap in the corners\n" +
+                "  boolean lowerLeftCorner = ballY + ballSize >= paddleTop &&\n" +
+                "      paddleLeft <= ballX && ballX <= paddleRight;\n" +
+                "  boolean lowerRightCorner = ballY + ballSize >= paddleTop &&\n" +
+                "      paddleLeft <= ballX + ballSize && ballX + ballSize <= paddleRight;\n" +
+                "\n" +
+                "  if (lowerLeftCorner && lowerRightCorner) {\n" +
+                "    ballY = paddleTop - ballSize;\n" +
+                "    bounce = true;\n" +
+                "  } else if (lowerLeftCorner) {\n" +
+                "    if (ballSpeedX > 0) {\n" +
+                "      ballY = paddleTop - ballSize;\n" +
+                "      bounce = true;\n" +
+                "    } else if (paddleRight - ballX > (ballY + ballSize) - paddleTop) {\n" +
+                "      ballY = paddleTop - ballSize;\n" +
+                "      bounce = true;\n" +
+                "    } else {\n" +
+                "      ballX = paddleRight;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "      alive = false;\n" +
+                "    }\n" +
+                "  } else if (lowerRightCorner) {\n" +
+                "    if (ballSpeedX < 0) {\n" +
+                "      ballY = paddleTop - ballSize;\n" +
+                "      bounce = true;\n" +
+                "    } else if ((ballX + ballSize) - paddleLeft > \n" +
+                "               (ballY + ballSize) - paddleTop) {\n" +
+                "      ballY = paddleTop - ballSize;\n" +
+                "      bounce = true;\n" +
+                "    } else {\n" +
+                "      ballX = paddleLeft - ballSize;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "      alive = false;\n" +
+                "    }\n" +
+                "  }\n" +
+                "\n" +
+                "  // if needed, bounce and change horizontal speed depending on where\n" +
+                "  // the ball strikes the paddle\n" +
+                "  if (bounce) {\n" +
+                "    ballSpeedY = -ballSpeedY;\n" +
+                "    ballSpeedX = ballSpeedX + (ballX - mouseX) / (paddleW / 2);\n" +
+                "  }\n" +
+                "}\n" +
+                " \n" +
+                "/**\n" +
+                " * Checks to see if ball is touching the block indicated.\n" +
+                " *\n" +
+                " * @param blockX x-coordinate of upper left corner of block\n" +
+                " * @param blockY y-coordinate of upper left corner of block\n" +
+                " * @param blockW width of block\n" +
+                " * @param blockH height of block\n" +
+                " */\n" +
+                "boolean isBallOnBlock(float blockX, float blockY, \n" +
+                "                        float blockW, float blockH)\n" +
+                "{\n" +
+                "  return (ballX + ballSize >= blockX && ballX <= blockX + blockW &&\n" +
+                "        ballY + ballSize >= blockY && ballY <= blockY + blockH);\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Determines which direction to bounce off of block.\n" +
+                " *\n" +
+                " * @param blockX x-coordinate of upper left corner of block\n" +
+                " * @param blockY y-coordinate of upper left corner of block\n" +
+                " * @param blockW width of block\n" +
+                " * @param blockH height of block\n" +
+                " */\n" +
+                "void bounceBallOffBlock(float blockX, float blockY, \n" +
+                "                       float blockW, float blockH)\n" +
+                "{\n" +
+                "  // look for overlap in the corners\n" +
+                "  boolean upperLeftCorner = \n" +
+                "      blockX <= ballX && ballX <= (blockX + blockW) &&\n" +
+                "      blockY <= ballY && ballY <= (blockY + blockH);\n" +
+                "  boolean upperRightCorner = \n" +
+                "      blockX <= ballX + ballSize && ballX + ballSize <= (blockX + blockW) &&\n" +
+                "      blockY <= ballY && ballY <= (blockY + blockH);\n" +
+                "  boolean lowerLeftCorner = \n" +
+                "      blockX <= ballX && ballX <= (blockX + blockW) &&\n" +
+                "      blockY <= ballY + ballSize && ballY + ballSize <= (blockY + blockH);\n" +
+                "  boolean lowerRightCorner = \n" +
+                "      blockX <= ballX + ballSize && ballX + ballSize <= (blockX + blockW) &&\n" +
+                "      blockY <= ballY + ballSize && ballY + ballSize <= (blockY + blockH);\n" +
+                "  \n" +
+                "  // first check for two corners\n" +
+                "  if (upperLeftCorner && upperRightCorner ||\n" +
+                "      lowerLeftCorner && lowerRightCorner) {\n" +
+                "    ballSpeedY = -ballSpeedY;\n" +
+                "  } else if (upperLeftCorner && lowerLeftCorner ||\n" +
+                "             upperRightCorner && lowerRightCorner) {\n" +
+                "    ballSpeedX = -ballSpeedX;\n" +
+                "  } else if (upperLeftCorner) { // not two corners at this point\n" +
+                "    if (ballSpeedX > 0) {\n" +
+                "      ballY = blockY + blockH;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else if (ballSpeedY > 0) {\n" +
+                "      ballX = blockX + blockW;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    } else if (((blockX + blockW) - ballX > (blockY + blockH) - ballY)) {\n" +
+                "      ballY = blockY + blockH;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else {\n" +
+                "      ballX = blockX + blockW;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    }\n" +
+                "  } else if (upperRightCorner) {\n" +
+                "    if (ballSpeedX < 0) {\n" +
+                "      ballY = blockY + blockH;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else if (ballSpeedY > 0) {\n" +
+                "      ballX = blockX - ballSize;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    } else if ((ballX + ballSize) - blockX > (blockY + blockH) - ballY) {\n" +
+                "      ballY = blockY + blockH;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else {\n" +
+                "      ballX = blockX - ballSize;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    }\n" +
+                "  } else if (lowerLeftCorner) {\n" +
+                "    if (ballSpeedX > 0) {\n" +
+                "      ballY = blockY - ballSize;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else if (ballSpeedY < 0) {\n" +
+                "      ballX = blockX + blockW;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    } else if ((blockX + blockW) - ballX > (ballY + ballSize) - blockY) {\n" +
+                "      ballY = blockY - ballSize;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else {\n" +
+                "      ballX = blockX + blockW;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    }\n" +
+                "  } else if (lowerRightCorner) {\n" +
+                "    if (ballSpeedX < 0) {\n" +
+                "      ballY = blockY - ballSize;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else if (ballSpeedY < 0) {\n" +
+                "      ballX = blockX - ballSize;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    } else if ((ballX + ballSize) - blockX > (ballY + ballSize) - blockY) {\n" +
+                "      ballY = blockY - ballSize;\n" +
+                "      ballSpeedY = -ballSpeedY;\n" +
+                "    } else {\n" +
+                "      ballX = blockX - ballSize;\n" +
+                "      ballSpeedX = -ballSpeedX;\n" +
+                "    }\n" +
+                "  }\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+    <br><br>
+
+    <h5>Week 12</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard12(event)">Starter Code</button>
+    <script>
+        function copyToClipboard12(event) {
             navigator.clipboard.writeText(
                 "// *** type your name here ***\n" +
                 "float y = 100;\n" +
@@ -71,10 +327,10 @@
     </script>
     <br><br>
 
-    <h5>Week 10</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard10(event)">Starter Code</button>
+    <h5>Week 11</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard11(event)">Starter Code</button>
     <script>
-        function copyToClipboard10(event) {
+        function copyToClipboard11(event) {
             navigator.clipboard.writeText(
                 "// *** Type your name here ***\n" +
                 "float shapeSize = 10;\n" +
