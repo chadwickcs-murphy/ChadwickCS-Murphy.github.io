@@ -37,6 +37,11 @@
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
     <h5>Week 13</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard13(event)">Starter Code</button>
+    <ul>
+        <li><a href="https://processing.org/reference/text_.html" target="_blank">text</a>(<i>string</i>, <i>leftX</i>, <i>bottomY</i>)</li>
+        <li><a href="https://processing.org/reference/textSize_.html" target="_blank">textSize</a>(<i>pixels</i>)</li>
+    </ul>
+
     <script>
         function copyToClipboard13(event) {
             navigator.clipboard.writeText(
@@ -289,10 +294,11 @@
             });
         }
     </script>
-    <br><br>
 
     <h5>Week 12</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard12(event)">Starter Code</button>
+    <br><br>
+
     <script>
         function copyToClipboard12(event) {
             navigator.clipboard.writeText(
@@ -325,10 +331,26 @@
             });
         }
     </script>
-    <br><br>
 
     <h5>Week 11</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard11(event)">Starter Code</button>
+    <ul>
+        <li><a href="https://processing.org/reference/mouseX.html" target="_blank">mouseX</a>, <a href="https://processing.org/reference/mouseY.html" target="_blank">mouseY</a></li>
+        <li>
+            <a href="https://processing.org/reference/mouseWheel_.html" target="_blank">mouseWheel</a>(MouseEvent event)<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;float e = event.getCount();<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs when the mouse wheel is moved</i><br>
+            }
+        </li>
+        <li>
+            <a href="https://processing.org/reference/mousePressed_.html" target="_blank">mousePressed</a>()<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs when the mouse button is pressed</i><br>
+            }
+        </li>
+    </ul>
+
     <script>
         function copyToClipboard11(event) {
             navigator.clipboard.writeText(
@@ -371,24 +393,40 @@
             });
         }
     </script>
-    <ul>
-        <li><a href="https://processing.org/reference/mouseX.html" target="_blank">mouseX</a>, <a href="https://processing.org/reference/mouseY.html" target="_blank">mouseY</a></li>
-        <li>
-            <a href="https://processing.org/reference/mouseWheel_.html" target="_blank">mouseWheel</a>(MouseEvent event)<br>
-            {<br>
-            &nbsp;&nbsp;&nbsp;float e = event.getCount();<br>
-            &nbsp;&nbsp;&nbsp;<i>code block that runs when the mouse wheel is moved</i><br>
-            }
-        </li>
-        <li>
-            <a href="https://processing.org/reference/mousePressed_.html" target="_blank">mousePressed</a>()<br>
-            {<br>
-            &nbsp;&nbsp;&nbsp;<i>code block that runs when the mouse button is pressed</i><br>
-            }
-        </li>
-    </ul>
+
     <h5>Week 4</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard4(event)">Starter Code</button>
+    <ul>
+        <li><a href="https://processing.org/reference/width.html" target="_blank">width</a>, <a href="https://processing.org/reference/height.html" target="_blank">height</a></li>
+        <li>
+            <a href="https://processing.org/reference/setup_.html" target="_blank">setup</a>()<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs when the program starts</i><br>
+            }
+        </li>
+        <li>
+            <a href="https://processing.org/reference/draw_.html" target="_blank">draw</a>()<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs over and over after setup() runs;<br>
+            &nbsp;&nbsp;&nbsp;the screen refreshes after this executes</i><br>
+            }
+        </li>
+        <li><a href="https://processing.org/reference/if.html" target="_blank">if</a> (<i>test</i>)<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is true</i><br>
+            }<br>
+        </li>
+        <li><a href="https://processing.org/reference/if.html" target="_blank">if</a> (<i>test</i>)<br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is true</i><br>
+            }<br>
+            <a href="https://processing.org/reference/else.html" target="_blank">else</a><br>
+            {<br>
+            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is false</i><br>
+            }<br>
+        </li>
+    </ul>
+
     <script>
         function copyToClipboard4(event) {
             navigator.clipboard.writeText(
@@ -420,36 +458,7 @@
             });
         }
     </script>
-    <ul>
-        <li><a href="https://processing.org/reference/width.html" target="_blank">width</a>, <a href="https://processing.org/reference/height.html" target="_blank">height</a></li>
-        <li>
-            <a href="https://processing.org/reference/setup_.html" target="_blank">setup</a>()<br>
-            {<br>
-            &nbsp;&nbsp;&nbsp;<i>code block that runs when the program starts</i><br>
-            }
-        </li>
-        <li>
-            <a href="https://processing.org/reference/draw_.html" target="_blank">draw</a>()<br>
-            {<br>
-            &nbsp;&nbsp;&nbsp;<i>code block that runs over and over after setup() runs;<br>
-            &nbsp;&nbsp;&nbsp;the screen refreshes after this executes</i><br>
-            }
-        </li>
-        <li><a href="https://processing.org/reference/if.html" target="_blank">if</a> (<i>test</i>)<br>
-            {<br>
-            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is true</i><br>
-            }<br>
-        </li>
-        <li><a href="https://processing.org/reference/if.html" target="_blank">if</a> (<i>test</i>)<br>
-            {<br>
-            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is true</i><br>
-            }<br>
-            <a href="https://processing.org/reference/else.html" target="_blank">else</a><br>
-            {<br>
-            &nbsp;&nbsp;&nbsp;<i>code block that runs if test is false</i><br>
-            }<br>
-        </li>
-    </ul>
+
     <h5>Week 3</h5>
     <ul>
         <li><a href="https://processing.org/reference/PI.html" target="_blank">PI</a></li>
@@ -489,10 +498,7 @@
     </ul>
     <!--
     <h5>Week 7</h5>
-    <ul>
-        <li><a href="https://processing.org/reference/text_.html" target="_blank">text</a>(string, leftX, bottomY)</li>
-        <li><a href="https://processing.org/reference/textSize_.html" target="_blank">textSize</a>(pixels)</li>
-    </ul>
+
     <h5>Week 9</h5>
     <ul>
         <li><a href="https://processing.org/reference/delay_.html" target="_blank">delay</a>(milliseconds)</li>
