@@ -36,11 +36,56 @@
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
     <h5>Week 16</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard16(event)">Starter Code</button>
     <ul>
         <li><a href="https://processing.org/reference/point_.html" target="_blank">point</a>(<i>x</i>, <i>y</i>)</li>
         <li><a href="https://processing.org/reference/sin_.html" target="_blank">sin</a>(<i>angle</i>)</li>
         <li><a href="https://processing.org/reference/pow_.html" target="_blank">pow</a>(<i>base</i>, <i>exponent</i>)</li>
     </ul>
+
+    <script>
+        function copyToClipboard16(event) {
+            navigator.clipboard.writeText(
+                "// your name here\n" +
+                "\n" +
+                "float x = -40;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(800, 800);\n" +
+                "  background(#000000);\n" +
+                "  fill(#FFFFFF);\n" +
+                "  stroke(#FFFFFF);\n" +
+                "  strokeWeight(3);\n" +
+                "  line(0, 400, 800, 400);\n" +
+                "  line(400, 0, 400, 800);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  float y1 = x;\n" +
+                "  stroke(#00FF00);\n" +
+                "  plot(x, y1);\n" +
+                "\n" +
+                "  x = x + 0.05;\n" +
+                "}\n" +
+                "\n" +
+                "/******************************************************************/\n" +
+                "/*********** Do not change code below this line. ******************/\n" +
+                "/******************************************************************/\n" +
+                "\n" +
+                "void plot(float plotX, float plotY)\n" +
+                "{\n" +
+                "  point(plotX * 10 + width / 2, -plotY * 10 + height / 2);\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
 
     <h5>Week 15</h5>
     <ul>
