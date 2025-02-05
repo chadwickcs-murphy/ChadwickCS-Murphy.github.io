@@ -35,7 +35,64 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
-    <h5>Week 16</h5>
+    <h5>Week 17 - My Desmos II</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard17(event)">Starter Code</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard17(event) {
+            navigator.clipboard.writeText(
+                "float x = -40;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(800, 800);\n" +
+                "  background(#000000);\n" +
+                "  strokeWeight(3);\n" +
+                "  fill(#FFFFFF);\n" +
+                "  stroke(#FFFFFF);\n" +
+                "  line(0, 400, 800, 400);\n" +
+                "  line(400, 0, 400, 800);\n" +
+                "  textSize(20);\n" +
+                "  text(\"x\", 785, 420);\n" +
+                "  text(\"y\", 410, 20);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  float nextX = x + 0.1;\n" +
+                "  \n" +
+                "  stroke(#00FF00);\n" +
+                "  plot(x, equation1(x), nextX, equation1(nextX));\n" +
+                "\n" +
+                "  x = nextX;\n" +
+                "}\n" +
+                "\n" +
+                "float equation1(float x)\n" +
+                "{\n" +
+                "  float y = sin(x / 2) / x * 50 + 0.005 * pow(x, 2) - 10;\n" +
+                "  return y;\n" +
+                "}\n" +
+                "\n" +
+                "/******************************************************************/\n" +
+                "/*********** Do not change code below this line. ******************/\n" +
+                "/******************************************************************/\n" +
+                "\n" +
+                "void plot(float x1, float y1, float x2, float y2)\n" +
+                "{\n" +
+                "  line(x1 * 10 + width / 2, -y1 * 10 + height / 2,\n" +
+                "       x2 * 10 + width / 2, -y2 * 10 + height / 2);\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
+    <h5>Week 16 - My Desmos</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard16(event)">Starter Code</button>
     <ul>
         <li><a href="https://processing.org/reference/point_.html" target="_blank">point</a>(<i>x</i>, <i>y</i>)</li>
@@ -87,7 +144,7 @@
         }
     </script>
 
-    <h5>Week 15</h5>
+    <h5>Week 15 - Final Paddle Ball</h5>
     <ul>
         <li><a href="https://processing.org/reference/delay_.html" target="_blank">delay</a>(<i>milliseconds</i>)</li>
         <li><a href="https://processing.org/reference/exit_.html" target="_blank">exit</a>()</li>
