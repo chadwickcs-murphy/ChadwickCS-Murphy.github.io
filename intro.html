@@ -35,6 +35,67 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
+    <h5>Week 18 - 2D Arrays</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard18(event)">Starter Code</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard18(event) {
+            navigator.clipboard.writeText(
+                "int maxRows = 5;\n" +
+                "int maxCols = 8;\n" +
+                "boolean[][] blocksDisplay = new boolean[maxRows][maxCols];\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(1000, 700);\n" +
+                "  \n" +
+                "  // initialize the blocksDisplay array to true\n" +
+                "  for (int row = 0; row < maxRows; row++)\n" +
+                "  {\n" +
+                "    for (int col = 0; col < maxCols; col++)\n" +
+                "    {\n" +
+                "      // set the blocksDisplay value to true\n" +
+                "      blocksDisplay[row][col] = true;\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "\n" +
+                "  // draw the circles here\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "// this method relies on the radius of the circles\n" +
+                "void mousePressed()\n" +
+                "{\n" +
+                "  // determine the closest circle to the mouse\n" +
+                "  int col = (mouseX - 100 + 50) / 100;\n" +
+                "  int row = (mouseY - 100 + 50) / 100;\n" +
+                "  if (row >= maxRows || col >= maxCols)\n" +
+                "  {\n" +
+                "    return;\n" +
+                "  }\n" +
+                "  // calculate the distance between the mouse and the center\n" +
+                "  // of the circle; if within the radius, hide the circle\n" +
+                "  if (Math.sqrt(Math.pow(mouseX - 100 - col * 100, 2) +\n" +
+                "                Math.pow(mouseY - 100 - row * 100, 2)) <= 50/2)\n" +
+                "  {\n" +
+                "    blocksDisplay[row][col] = false;\n" +
+                "  }\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
     <h5>Week 17 - My Desmos II</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard17(event)">Starter Code</button>
     <br><br>
