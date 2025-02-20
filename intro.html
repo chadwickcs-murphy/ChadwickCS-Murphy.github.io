@@ -45,6 +45,8 @@
                 "int maxRows = 5;\n" +
                 "int maxCols = 8;\n" +
                 "boolean[][] blocksDisplay = new boolean[maxRows][maxCols];\n" +
+                "int[][] blocksX = new int[maxRows][maxCols];\n" +
+                "int[][] blocksY = new int[maxRows][maxCols];\n" +
                 "\n" +
                 "void setup()\n" +
                 "{\n" +
@@ -57,6 +59,16 @@
                 "    {\n" +
                 "      // set the blocksDisplay value to true\n" +
                 "      blocksDisplay[row][col] = true;\n" +
+                "    }\n" +
+                "  }\n" +
+                "  \n" +
+                "  // initialize the location of the blocks\n" +
+                "  for (int row = 0; row < maxRows; row++)\n" +
+                "  {\n" +
+                "    for (int col = 0; col < maxCols; col++)\n" +
+                "    {\n" +
+                "      blocksX[row][col] = col * 100 + 100;\n" +
+                "      blocksY[row][col] = row * 100 + 100;\n" +
                 "    }\n" +
                 "  }\n" +
                 "}\n" +
