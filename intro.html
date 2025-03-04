@@ -35,6 +35,120 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
+    <h5>Week 20 - Alien March</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard20(event)">Starter Code</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard20(event) {
+            navigator.clipboard.writeText(
+                "int maxRows = 5;\n" +
+                "int maxCols = 10;\n" +
+                "boolean[][] blocksDisplay = new boolean[maxRows][maxCols];\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(1000, 700);\n" +
+                "  initializeRound();\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "  \n" +
+                "  fill(#FFFFFF);\n" +
+                "  \n" +
+                "  drawAliens();\n" +
+                "  loadPixels();\n" +
+                "\n" +
+                "  checkAliens();\n" +
+                "  moveAliens();\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Sets up all the parameters for a new round\n" +
+                " */\n" +
+                "void initializeRound()\n" +
+                "{\n" +
+                "  for (int i = 0; i < blocksDisplay.length; i++)\n" +
+                "  {\n" +
+                "    for (int j = 0; j < blocksDisplay[0].length; j++)\n" +
+                "    {\n" +
+                "      blocksDisplay[i][j] = true;\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Draws the remaining aliens on the screen.\n" +
+                " */\n" +
+                "void drawAliens()\n" +
+                "{\n" +
+                "  for (int row = 0; row < blocksDisplay.length; row++)\n" +
+                "  {\n" +
+                "    for (int col = 0; col < blocksDisplay[0].length; col++)\n" +
+                "    {\n" +
+                "      if (blocksDisplay[row][col])\n" +
+                "      {\n" +
+                "        drawAlien(row, col);\n" +
+                "      }\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Shifts aliens offset to the next location.\n" +
+                " */\n" +
+                "void moveAliens()\n" +
+                "{\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "void drawAlien(int row, int col)\n" +
+                "{\n" +
+                "  float x = col * 80;\n" +
+                "  float y = row * 80;\n" +
+                "\n" +
+                "  fill(#FFFFFF);\n" +
+                "  stroke(#FFFFFF);\n" +
+                "  translate(x, y);\n" +
+                "  beginShape();\n" +
+                "  vertex(-25, -25);\n" +
+                "  vertex(25, -25);\n" +
+                "  vertex(25, 25);\n" +
+                "  vertex(-25, 25);\n" +
+                "  endShape();\n" +
+                "  translate(-x, -y);\n" +
+                "}\n" +
+                "\n" +
+                "void checkAliens()\n" +
+                "{\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "void mousePressed()\n" +
+                "{\n" +
+                "  // determine the closest alien to the mouse\n" +
+                "  int col = (int)((mouseX) / 80 + 0.5);\n" +
+                "  int row = (int)((mouseY) / 80 + 0.5);\n" +
+                "  if (row < 0 || row >= maxRows || col < 0 || col >= maxCols)\n" +
+                "  {\n" +
+                "    return;\n" +
+                "  }\n" +
+                "  else\n" +
+                "  {\n" +
+                "    blocksDisplay[row][col] = false;\n" +
+                "  }\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
     <h5>Week 18 - 2D Arrays</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard18(event)">Starter Code</button>
     <br><br>
