@@ -35,12 +35,395 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
-    <h5>Week 20 - Alien March</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard20(event)">Starter Code</button>
+    <h5>Week 22 - More Alien March</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard22(event)">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard20(event) {
+        function copyToClipboard22(event) {
+            navigator.clipboard.writeText(
+                "float aliensOffsetX;\n" +
+                "float aliensOffsetY;\n" +
+                "float aliensSpeedX;\n" +
+                "float aliensSpeedY;\n" +
+                "float aliensLeftBoundaryX;\n" +
+                "float aliensRightBoundaryX;\n" +
+                "float baseX;\n" +
+                "float baseY;\n" +
+                "float shotX;\n" +
+                "float shotY;\n" +
+                "boolean alive;\n" +
+                "int lives = 3;\n" +
+                "int round = 1;\n" +
+                "int score = 0;\n" +
+                "boolean roundOver = false;\n" +
+                "boolean baseExplosion = false;\n" +
+                "int explosionPhase = 0;\n" +
+                "\n" +
+                "int maxRows = 5;\n" +
+                "int maxCols = 10;\n" +
+                "boolean[][] blocksDisplay = new boolean[maxRows][maxCols];\n" +
+                "ArrayList<Bomb> bombList = new ArrayList<Bomb>();\n" +
+                "\n" +
+                "boolean isLeftPressed = false;\n" +
+                "boolean isRightPressed = false;\n" +
+                "boolean isSpacePressed = false;\n" +
+                "\n" +
+                "boolean shotFired = false;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(1000, 700);\n" +
+                "  initializeRound();\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "  \n" +
+                "  fill(#FFFFFF);\n" +
+                "  \n" +
+                "  drawBase();\n" +
+                "  drawAliens();\n" +
+                "  loadPixels();\n" +
+                "\n" +
+                "  moveBase();\n" +
+                "  moveAliens();\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Sets up all the parameters for a new round\n" +
+                " */\n" +
+                "void initializeRound()\n" +
+                "{\n" +
+                "  aliensOffsetX = 50;\n" +
+                "  aliensOffsetY = 50;\n" +
+                "  aliensSpeedX = 0.3;\n" +
+                "  aliensSpeedY = 10;\n" +
+                "  aliensLeftBoundaryX = 50;\n" +
+                "  aliensRightBoundaryX = 225;\n" +
+                "  \n" +
+                "  alive = true;\n" +
+                "  bombList.clear();\n" +
+                "  \n" +
+                "  baseX = 500;\n" +
+                "  baseY = 650;\n" +
+                "  \n" +
+                "  for (int i = 0; i < blocksDisplay.length; i++)\n" +
+                "  {\n" +
+                "    for (int j = 0; j < blocksDisplay[0].length; j++)\n" +
+                "    {\n" +
+                "      blocksDisplay[i][j] = true;\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Draws the remaining aliens on the screen.\n" +
+                " */\n" +
+                "void drawAliens()\n" +
+                "{\n" +
+                "  for (int row = 0; row < blocksDisplay.length; row++)\n" +
+                "  {\n" +
+                "    for (int col = 0; col < blocksDisplay[0].length; col++)\n" +
+                "    {\n" +
+                "      if (blocksDisplay[row][col])\n" +
+                "      {\n" +
+                "        drawAlien(row, col);\n" +
+                "      }\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "/**\n" +
+                " * Shifts aliens offset to the next location.\n" +
+                " */\n" +
+                "void moveAliens()\n" +
+                "{\n" +
+                "  aliensOffsetX = aliensOffsetX + aliensSpeedX;\n" +
+                "  if (aliensOffsetX > aliensRightBoundaryX)\n" +
+                "  {\n" +
+                "    aliensSpeedX = -aliensSpeedX * 1.05;\n" +
+                "    aliensOffsetY = aliensOffsetY + aliensSpeedY;\n" +
+                "  }\n" +
+                "  if (aliensOffsetX < aliensLeftBoundaryX)\n" +
+                "  {\n" +
+                "    aliensSpeedX = -aliensSpeedX * 1.05;\n" +
+                "    aliensOffsetY = aliensOffsetY + aliensSpeedY;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void drawAlien(int row, int col)\n" +
+                "{\n" +
+                "  float x = col * 80 + aliensOffsetX;\n" +
+                "  float y = row * 80 + aliensOffsetY;\n" +
+                "\n" +
+                "  fill(#FFFFFF);\n" +
+                "  stroke(#FFFFFF);\n" +
+                "  translate(x, y);\n" +
+                "  beginShape();\n" +
+                "  vertex(-25, -25);\n" +
+                "  vertex(25, -25);\n" +
+                "  vertex(25, 25);\n" +
+                "  vertex(-25, 25);\n" +
+                "  endShape();\n" +
+                "  translate(-x, -y);\n" +
+                "}\n" +
+                "\n" +
+                "void checkAliens()\n" +
+                "{\n" +
+                "  \n" +
+                "}\n" +
+                "\n" +
+                "void initializeShotFired()\n" +
+                "{\n" +
+                "  shotFired = true;\n" +
+                "  shotX = baseX;\n" +
+                "  shotY = baseY - 50;\n" +
+                "}\n" +
+                "\n" +
+                "void continueShotFired()\n" +
+                "{\n" +
+                "  drawShot(shotX, shotY);\n" +
+                "  detectCollisionWithShot();\n" +
+                "  shotY = shotY - 8;\n" +
+                "  if (shotY < 1)\n" +
+                "  {\n" +
+                "    shotFired = false;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void detectCollisionWithShot()\n" +
+                "{\n" +
+                "  //loadPixels();\n" +
+                "  if (pixels[(int)shotX + ((int)shotY - 1) * width] > #000000)\n" +
+                "  {\n" +
+                "    shotFired = false;\n" +
+                "    \n" +
+                "    // determine the closest circle to the mouse\n" +
+                "    int col = (int)((shotX - aliensOffsetX) / 80 + 0.5);\n" +
+                "    int row = (int)((shotY - aliensOffsetY) / 80 + 0.5);\n" +
+                "\n" +
+                "    if (row >= 0 && row < maxRows && col >=0 && col < maxCols)\n" +
+                "    {\n" +
+                "      blocksDisplay[row][col] = false;\n" +
+                "      score = score + 50;\n" +
+                "      aliensSpeedX = aliensSpeedX * 1.05;\n" +
+                "      checkAliens();\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void drawShot(float x, float y)\n" +
+                "{\n" +
+                "  fill(#FF0000);\n" +
+                "  stroke(#FF0000);\n" +
+                "  translate(x, y);\n" +
+                "  beginShape();\n" +
+                "  vertex(-1, 0);\n" +
+                "  vertex(-1, 8);  \n" +
+                "  vertex(1, 8);\n" +
+                "  vertex(1, 0);\n" +
+                "  endShape();\n" +
+                "  translate(-x, -y);\n" +
+                "}\n" +
+                "\n" +
+                "void drawBase()\n" +
+                "{\n" +
+                "  fill(#00FF00);\n" +
+                "  stroke(#00FF00);\n" +
+                "  translate(baseX, baseY);\n" +
+                "  beginShape();\n" +
+                "  vertex(-40, 0);\n" +
+                "  vertex(-40, -25);\n" +
+                "  vertex(-35, -30);\n" +
+                "  vertex(-10, -30);\n" +
+                "  vertex(-10, -40);\n" +
+                "  vertex(-1, -40);\n" +
+                "  vertex(-1, -45);\n" +
+                "  vertex(1, -45);\n" +
+                "  vertex(1, -40);\n" +
+                "  vertex(10, -40);\n" +
+                "  vertex(10, -30);\n" +
+                "  vertex(35, -30);\n" +
+                "  vertex(40, -25);\n" +
+                "  vertex(40, 0);\n" +
+                "  endShape();\n" +
+                "  translate(-baseX, -baseY);\n" +
+                "}\n" +
+                "\n" +
+                "void moveBase()\n" +
+                "{\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "void explodeBase()\n" +
+                "{\n" +
+                "  noFill();\n" +
+                "  stroke(#FA9600);\n" +
+                "  for (int i = 0; i < explosionPhase * 4; i += 4)\n" +
+                "  {\n" +
+                "    beginShape();\n" +
+                "    curveVertex(baseX - i, baseY + i);\n" +
+                "    curveVertex(baseX - i, baseY);\n" +
+                "    curveVertex(baseX, baseY - i);\n" +
+                "    curveVertex(baseX + i, baseY);\n" +
+                "    curveVertex(baseX + i, baseY + i);\n" +
+                "    endShape();\n" +
+                "  }\n" +
+                "  explosionPhase++;\n" +
+                "  if (explosionPhase > 20)\n" +
+                "  {\n" +
+                "    baseExplosion = false;\n" +
+                "    explosionPhase = 0;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void dropBombs()\n" +
+                "{\n" +
+                "  if (random(1000) < 10)\n" +
+                "  {\n" +
+                "    int x = (int) random(maxCols);\n" +
+                "    int y = (int) random(maxRows);\n" +
+                "    while (blocksDisplay[y][x] != true)\n" +
+                "    {\n" +
+                "      x = (int) random(maxCols);\n" +
+                "      y = (int) random(maxRows);\n" +
+                "    }\n" +
+                "    bombList.add(new Bomb(x * 80 + aliensOffsetX, y * 80 + aliensOffsetY));\n" +
+                "  }\n" +
+                "  \n" +
+                "  for (int i = 0; i < bombList.size(); i++)\n" +
+                "  {\n" +
+                "    bombList.get(i).drawBomb();\n" +
+                "    if (bombList.get(i).bombHit())\n" +
+                "    {\n" +
+                "      alive = false;\n" +
+                "      baseExplosion = true;\n" +
+                "      bombList.clear();\n" +
+                "    }\n" +
+                "    else if (bombList.get(i).bombMissed())\n" +
+                "    {\n" +
+                "      bombList.remove(i);\n" +
+                "    }\n" +
+                "    else\n" +
+                "    {\n" +
+                "      bombList.get(i).moveBomb();\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void drawBomb(float x, float y)\n" +
+                "{\n" +
+                "  fill(#FF0000);\n" +
+                "  stroke(#FF0000);\n" +
+                "  translate(x, y);\n" +
+                "  beginShape();\n" +
+                "  vertex(-1, 0);\n" +
+                "  vertex(-1, -8);  \n" +
+                "  vertex(1, -8);\n" +
+                "  vertex(1, 0);\n" +
+                "  endShape();\n" +
+                "  translate(-x, -y);\n" +
+                "}\n" +
+                "\n" +
+                "void keyPressed()\n" +
+                "{\n" +
+                "  if (key == ' ') {\n" +
+                "    isSpacePressed = true;\n" +
+                "  } else if (key == CODED && keyCode == 37) {\n" +
+                "    isLeftPressed = true;\n" +
+                "  } else if (key == CODED && keyCode == 39) {\n" +
+                "    isRightPressed = true;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void keyReleased()\n" +
+                "{\n" +
+                "  if (key == ' ') {\n" +
+                "    isSpacePressed = false;\n" +
+                "  } else if (key == CODED && keyCode == 37) {\n" +
+                "    isLeftPressed = false;\n" +
+                "  } else if (key == CODED && keyCode == 39) {\n" +
+                "    isRightPressed = false;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void mousePressed()\n" +
+                "{\n" +
+                "  // determine the closest alien to the mouse\n" +
+                "  int col = (int)((mouseX - aliensOffsetX) / 80 + 0.5);\n" +
+                "  int row = (int)((mouseY - aliensOffsetY) / 80 + 0.5);\n" +
+                "  if (row < 0 || row >= maxRows || col < 0 || col >= maxCols)\n" +
+                "  {\n" +
+                "    return;\n" +
+                "  }\n" +
+                "  else\n" +
+                "  {\n" +
+                "    blocksDisplay[row][col] = false;\n" +
+                "    aliensSpeedX = aliensSpeedX * 1.04;\n" +
+                "    checkAliens();\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "class Bomb\n" +
+                "{\n" +
+                "  PShape s;\n" +
+                "  float x;\n" +
+                "  float y;\n" +
+                "  \n" +
+                "  Bomb(float x, float y)\n" +
+                "  {\n" +
+                "    this.x = x;\n" +
+                "    this.y = y;\n" +
+                "    \n" +
+                "    s = createShape();\n" +
+                "    s.beginShape();\n" +
+                "    s.fill(#FF0000);\n" +
+                "    s.stroke(#FF0000);\n" +
+                "    s.vertex(-1, 0);\n" +
+                "    s.vertex(-1, -8);  \n" +
+                "    s.vertex(1, -8);\n" +
+                "    s.vertex(1, 0);\n" +
+                "    s.endShape();\n" +
+                "  }\n" +
+                "  \n" +
+                "  void drawBomb()\n" +
+                "  {\n" +
+                "    shape(s, x, y);\n" +
+                "  }\n" +
+                "  \n" +
+                "  void moveBomb()\n" +
+                "  {\n" +
+                "    y = y + 5;\n" +
+                "  }\n" +
+                "  \n" +
+                "  boolean bombHit()\n" +
+                "  {\n" +
+                "    //loadPixels();\n" +
+                "    return pixels[(int) x + (int) y * width] == #00FF00;\n" +
+                "  }\n" +
+                "  \n" +
+                "  boolean bombMissed()\n" +
+                "  {\n" +
+                "    return y > height - 10;\n" +
+                "  }\n" +
+                "}"
+                ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
+    <h5>Week 21 - Alien March</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard21(event)">Starter Code</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard21(event) {
             navigator.clipboard.writeText(
                 "int maxRows = 5;\n" +
                 "int maxCols = 10;\n" +
