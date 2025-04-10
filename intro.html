@@ -35,6 +35,99 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
+    <h5>Week 24 - Beginning Snake</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard24(event)">Starter Code</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard24(event) {
+            navigator.clipboard.writeText(
+                "final int maxRows = 34;\n" +
+                "final int maxCols = 54;\n" +
+                "\n" +
+                "boolean isLeftPressed = false;\n" +
+                "boolean isRightPressed = false;\n" +
+                "boolean isUpPressed = false;\n" +
+                "boolean isDownPressed = false;\n" +
+                "\n" +
+                "int movePhase = 0;\n" +
+                "int currRow = maxRows / 2;\n" +
+                "int currCol = maxCols / 2;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(1350, 850);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "  drawGrid();\n" +
+                "  drawSnake();\n" +
+                "  moveSnake();\n" +
+                "}\n" +
+                "\n" +
+                "void drawGrid()\n" +
+                "{\n" +
+                "  stroke(#404040);\n" +
+                "  // make a loop to draw horizontal lines row by row\n" +
+                "\n" +
+                "  // make a loop to draw vertical lines column by column\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "void drawSnake()\n" +
+                "{\n" +
+                "  fill(#FFFFFF);\n" +
+                "  translate(currCol * 25, currRow * 25);\n" +
+                "  square(0, 0, 25);\n" +
+                "  translate(-(currCol * 25), -(currRow * 25));\n" +
+                "}\n" +
+                "\n" +
+                "void moveSnake()\n" +
+                "{\n" +
+                "  movePhase++;\n" +
+                "  if (movePhase > 30)\n" +
+                "  {\n" +
+                "    movePhase = 0;\n" +
+                "    // check the variables isLeftPressed, isRightPressed, isUpPressed, isDownPressed\n" +
+                "    // only one of the variables will be set to true\n" +
+                "    // adjust the variables currCol and currRow as needed\n" +
+                "\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void keyPressed()\n" +
+                "{\n" +
+                "  // clear key presses so the last key pressed is the current key\n" +
+                "  isLeftPressed = false;\n" +
+                "  isRightPressed = false;\n" +
+                "  isUpPressed = false;\n" +
+                "  isDownPressed = false;\n" +
+                "  \n" +
+                "  if (key == CODED && keyCode == 37) {\n" +
+                "    isLeftPressed = true;\n" +
+                "    println(\"Left\");\n" +
+                "  } else if (key == CODED && keyCode == 39) {\n" +
+                "    isRightPressed = true;\n" +
+                "    println(\"Right\");\n" +
+                "  } else if (key == CODED && keyCode == 38) {\n" +
+                "    isUpPressed = true;\n" +
+                "    println(\"Up\");\n" +
+                "  } else if (key == CODED && keyCode == 40) {\n" +
+                "    isDownPressed = true;\n" +
+                "    println(\"Down\");\n" +
+                "  }\n" +
+                "}"
+            ).then(() => {
+                event.target.attributes.title="Copied";
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
     <h5>Week 23 - Final Alien March</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard23(event)">Starter Code</button>
     <br><br>
