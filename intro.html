@@ -36,11 +36,14 @@
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
     <h5>Week 24 - Beginning Snake</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard24(event)">Starter Code</button>
-    <br><br>
+    <button title="Copy code to clipboard" onclick="copyToClipboard24()">Starter Code</button>
+    <br>
+    <ul>
+        <li><a href="https://processing.org/reference/random_.html" target="_blank">random(<i>low</i>, <i>high</i>)</a></li>
+    </ul>
 
     <script>
-        function copyToClipboard24(event) {
+        function copyToClipboard24() {
             navigator.clipboard.writeText(
                 "final int maxRows = 34;\n" +
                 "final int maxCols = 54;\n" +
@@ -120,7 +123,6 @@
                 "  }\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -129,11 +131,11 @@
     </script>
 
     <h5>Week 23 - Final Alien March</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard23(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard23()">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard23(event) {
+        function copyToClipboard23() {
             navigator.clipboard.writeText(
                 "float aliensOffsetX;\n" +
                 "float aliensOffsetY;\n" +
@@ -608,7 +610,6 @@
                 "  }\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -617,11 +618,11 @@
     </script>
 
     <h5>Week 22 - More Alien March</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard22(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard22()">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard22(event) {
+        function copyToClipboard22() {
             navigator.clipboard.writeText(
                 "float aliensOffsetX;\n" +
                 "float aliensOffsetY;\n" +
@@ -991,7 +992,6 @@
                 "  }\n" +
                 "}"
                 ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1000,11 +1000,11 @@
     </script>
 
     <h5>Week 21 - Alien March</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard21(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard21()">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard21(event) {
+        function copyToClipboard21() {
             navigator.clipboard.writeText(
                 "int maxRows = 5;\n" +
                 "int maxCols = 10;\n" +
@@ -1105,7 +1105,6 @@
                 "  }\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1114,11 +1113,11 @@
     </script>
 
     <h5>Week 18 - 2D Arrays</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard18(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard18()">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard18(event) {
+        function copyToClipboard18() {
             navigator.clipboard.writeText(
                 "int maxRows = 5;\n" +
                 "int maxCols = 8;\n" +
@@ -1178,7 +1177,6 @@
                 "  }\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1187,11 +1185,11 @@
     </script>
 
     <h5>Week 17 - My Desmos II</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard17(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard17()">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard17(event) {
+        function copyToClipboard17() {
             navigator.clipboard.writeText(
                 "float x = -40;\n" +
                 "\n" +
@@ -1235,7 +1233,6 @@
                 "       x2 * 10 + width / 2, -y2 * 10 + height / 2);\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1244,7 +1241,7 @@
     </script>
 
     <h5>Week 16 - My Desmos</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard16(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard16()">Starter Code</button>
     <ul>
         <li><a href="https://processing.org/reference/point_.html" target="_blank">point</a>(<i>x</i>, <i>y</i>)</li>
         <li><a href="https://processing.org/reference/sin_.html" target="_blank">sin</a>(<i>angle</i>)</li>
@@ -1252,7 +1249,7 @@
     </ul>
 
     <script>
-        function copyToClipboard16(event) {
+        function copyToClipboard16() {
             navigator.clipboard.writeText(
                 "// your name here\n" +
                 "\n" +
@@ -1287,7 +1284,6 @@
                 "  point(plotX * 10 + width / 2, -plotY * 10 + height / 2);\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1302,11 +1298,11 @@
     </ul>
 
     <h5>Week 14 - Even More Paddle Ball</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard14(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard14()">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard14(event) {
+        function copyToClipboard14() {
             navigator.clipboard.writeText(
                 "// put your name here\n" +
                 "\n" +
@@ -1566,7 +1562,6 @@
                 "  }\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1575,14 +1570,14 @@
     </script>
 
     <h5>Week 13 - More Paddle Ball</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard13(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard13()">Starter Code</button>
     <ul>
         <li><a href="https://processing.org/reference/text_.html" target="_blank">text</a>(<i>string</i>, <i>leftX</i>, <i>bottomY</i>)</li>
         <li><a href="https://processing.org/reference/textSize_.html" target="_blank">textSize</a>(<i>pixels</i>)</li>
     </ul>
 
     <script>
-        function copyToClipboard13(event) {
+        function copyToClipboard13() {
             navigator.clipboard.writeText(
                 "// *** type your name here ***\n" +
                 "\n" +
@@ -1825,7 +1820,6 @@
                 "  }\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1834,11 +1828,11 @@
     </script>
 
     <h5>Week 12 - Paddle Ball</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard12(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard12()">Starter Code</button>
     <br><br>
 
     <script>
-        function copyToClipboard12(event) {
+        function copyToClipboard12() {
             navigator.clipboard.writeText(
                 "// *** type your name here ***\n" +
                 "float y = 100;\n" +
@@ -1862,7 +1856,6 @@
                 "  square(100, y, 20);\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1871,7 +1864,7 @@
     </script>
 
     <h5>Week 11 - Incorporating the Mouse</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard11(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard11()">Starter Code</button>
     <ul>
         <li><a href="https://processing.org/reference/mouseX.html" target="_blank">mouseX</a>, <a href="https://processing.org/reference/mouseY.html" target="_blank">mouseY</a></li>
         <li>
@@ -1890,7 +1883,7 @@
     </ul>
 
     <script>
-        function copyToClipboard11(event) {
+        function copyToClipboard11() {
             navigator.clipboard.writeText(
                 "// *** Type your name here ***\n" +
                 "float shapeSize = 10;\n" +
@@ -1924,7 +1917,6 @@
                 "  background(#000000);\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
@@ -1933,7 +1925,7 @@
     </script>
 
     <h5>Week 4</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard4(event)">Starter Code</button>
+    <button title="Copy code to clipboard" onclick="copyToClipboard4()">Starter Code</button>
     <ul>
         <li><a href="https://processing.org/reference/width.html" target="_blank">width</a>, <a href="https://processing.org/reference/height.html" target="_blank">height</a></li>
         <li>
@@ -1966,7 +1958,7 @@
     </ul>
 
     <script>
-        function copyToClipboard4(event) {
+        function copyToClipboard4() {
             navigator.clipboard.writeText(
                 "float x = 100;\n" +
                 "float xSpeed = 2.5;\n" +
@@ -1989,7 +1981,6 @@
                 "  circle(x, 100, 50);\n" +
                 "}"
             ).then(() => {
-                event.target.attributes.title="Copied";
                 alert("Code copied to clipboard!");
             }).catch(err => {
                 console.error("Failed to copy text: ", err);
