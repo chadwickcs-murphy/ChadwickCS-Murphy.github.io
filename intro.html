@@ -35,6 +35,309 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
+    <h5>Week 25 - Snake Round II</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard25()">Starter Code</button>
+    <br>
+    <ul>
+        <li><a href="https://processing.org/reference/IntList.html" target="_blank">IntList</a></li>
+        <li><a href="https://processing.org/reference/IntList_size_.html" target="_blank">.size()</a></li>
+        <li><a href="https://processing.org/reference/IntList_add_.html" target="_blank">.add(<i>index</i>, <i>value</i>)</a></li>
+        <li><a href="https://processing.org/reference/IntList_append_.html" target="_blank">.append(<i>value</i>)</a></li>
+        <li><a href="https://processing.org/reference/IntList_get_.html" target="_blank">.get(<i>index</i>)</a></li>
+        <li><a href="https://processing.org/reference/IntList_set_.html" target="_blank">.set(<i>index</i>, <i>value</i>)</a></li>
+    </ul>
+
+    <script>
+        function copyToClipboard25() {
+            navigator.clipboard.writeText(
+                "final int maxRows = 20;\n" +
+                "final int maxCols = 30;\n" +
+                "final int rowGap = 25;\n" +
+                "final int colGap = 25;\n" +
+                "final int offsetX = 50;\n" +
+                "final int offsetY = 50;\n" +
+                "\n" +
+                "boolean isLeftPressed = true;\n" +
+                "boolean isRightPressed = false;\n" +
+                "boolean isUpPressed = false;\n" +
+                "boolean isDownPressed = false;\n" +
+                "\n" +
+                "int movePhase = 0;\n" +
+                "int currRow = maxRows / 2;\n" +
+                "int currCol = maxCols / 2;\n" +
+                "String previousMove = \"none\";\n" +
+                "IntList snakeCols;\n" +
+                "IntList snakeRows;\n" +
+                "\n" +
+                "boolean foodPresent = false;\n" +
+                "int foodCol;\n" +
+                "int foodRow;\n" +
+                "\n" +
+                "int score = 0;\n" +
+                "int len = 4;\n" +
+                "boolean gameOver = false;\n" +
+                "int gameOverPhase = 0;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(850, 600);\n" +
+                "  snakeRows = new IntList();\n" +
+                "  snakeRows.append(currRow);\n" +
+                "  snakeRows.append(currRow);\n" +
+                "  snakeRows.append(currRow);\n" +
+                "  snakeRows.append(currRow);\n" +
+                "  snakeCols = new IntList();\n" +
+                "  snakeCols.append(currCol);\n" +
+                "  snakeCols.append(currCol);\n" +
+                "  snakeCols.append(currCol);\n" +
+                "  snakeCols.append(currCol);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "\n" +
+                "  if (gameOver)\n" +
+                "  {\n" +
+                "    endGame();\n" +
+                "  }\n" +
+                "\n" +
+                "  moveSnake();\n" +
+                "  validateSnakeLocation();\n" +
+                "  checkFood();\n" +
+                "\n" +
+                "  drawGrid();\n" +
+                "  drawBorder();\n" +
+                "  drawFood();\n" +
+                "  drawSnake();\n" +
+                "  \n" +
+                "}\n" +
+                "\n" +
+                "void endGame()\n" +
+                "{\n" +
+                "  gameOverPhase++;\n" +
+                "  \n" +
+                "  if (gameOverPhase > 500)\n" +
+                "  {\n" +
+                "    exit();\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void drawGrid()\n" +
+                "{\n" +
+                "  stroke(#404040);\n" +
+                "  noFill();\n" +
+                "  for (int row = 0; row <= maxRows; row++)\n" +
+                "  {\n" +
+                "    line(offsetX, offsetY + row * rowGap, width - offsetX, offsetY + row * rowGap);\n" +
+                "  }\n" +
+                "  for (int col = 0; col <= maxCols; col++)\n" +
+                "  {\n" +
+                "    line(offsetX + col * colGap, offsetY, offsetX + col * colGap, height - offsetY);\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void drawBorder()\n" +
+                "{\n" +
+                "  fill(#404040);\n" +
+                "  beginShape();\n" +
+                "  vertex(0, 0);\n" +
+                "  vertex(width, 0);\n" +
+                "  vertex(width, height);\n" +
+                "  vertex(0, height);\n" +
+                "  vertex(0, 0);\n" +
+                "  vertex(offsetX, offsetY);\n" +
+                "  vertex(offsetX, height - offsetY);\n" +
+                "  vertex(width - offsetX, height - offsetY);\n" +
+                "  vertex(width - offsetX, offsetY);\n" +
+                "  vertex(offsetX, offsetY);\n" +
+                "  vertex(0, 0);\n" +
+                "  endShape();\n" +
+                "}\n" +
+                "\n" +
+                "void drawSnake()\n" +
+                "{\n" +
+                "  drawSnakeSegment(currRow, currCol);\n" +
+                "}\n" +
+                "\n" +
+                "void drawSnakeHead()\n" +
+                "{\n" +
+                "  fill(#FFFFFF);\n" +
+                "  translate(offsetX + snakeCols.get(0) * colGap, offsetY + snakeRows.get(0) * rowGap);\n" +
+                "  square(0, 0, 25);\n" +
+                "  fill(#00FF00);\n" +
+                "  if (previousMove == \"up\")\n" +
+                "  {\n" +
+                "    square(5, 16, 4);\n" +
+                "    square(16, 16, 4);\n" +
+                "  }\n" +
+                "  else if (previousMove == \"down\")\n" +
+                "  {\n" +
+                "    square(5, 6, 4);\n" +
+                "    square(16, 6, 4);\n" +
+                "  }\n" +
+                "  else if (previousMove == \"left\")\n" +
+                "  {\n" +
+                "    square(16, 5, 4);\n" +
+                "    square(16, 16, 4);\n" +
+                "  }\n" +
+                "  else if (previousMove == \"right\")\n" +
+                "  {\n" +
+                "    square(6, 5, 4);\n" +
+                "    square(6, 16, 4);\n" +
+                "  }\n" +
+                "  translate(-(offsetX + snakeCols.get(0) * colGap), -(offsetY + snakeRows.get(0) * rowGap));\n" +
+                "}\n" +
+                "\n" +
+                "void drawSnakeSegment(int row, int col)\n" +
+                "{\n" +
+                "  fill(#FFFFFF);\n" +
+                "  translate(offsetX + col * colGap, offsetY + row * rowGap);\n" +
+                "  square(0, 0, 25);\n" +
+                "  translate(-(offsetX + col * colGap), -(offsetY + row * rowGap));\n" +
+                "}\n" +
+                "\n" +
+                "void moveSnake()\n" +
+                "{\n" +
+                "  movePhase++;\n" +
+                "  if (movePhase > 30 && !gameOver)\n" +
+                "  {\n" +
+                "    movePhase = 0;\n" +
+                "    if (score < 0)\n" +
+                "    {\n" +
+                "      score = 0;\n" +
+                "    }\n" +
+                "    if (isLeftPressed)\n" +
+                "    {\n" +
+                "      if (!previousMove.equals(\"right\"))\n" +
+                "      {\n" +
+                "        previousMove = \"left\";\n" +
+                "        currCol--;\n" +
+                "      }\n" +
+                "      else\n" +
+                "      {\n" +
+                "        currCol++;  // keep going right\n" +
+                "      }\n" +
+                "    }\n" +
+                "    else if (isRightPressed)\n" +
+                "    {\n" +
+                "      if (!previousMove.equals(\"left\"))\n" +
+                "      {\n" +
+                "        previousMove = \"right\";\n" +
+                "        currCol++;\n" +
+                "      }\n" +
+                "      else\n" +
+                "      {\n" +
+                "        currCol--; // keep going left\n" +
+                "      }\n" +
+                "    }\n" +
+                "    else if (isUpPressed)\n" +
+                "    {\n" +
+                "      if (!previousMove.equals(\"down\"))\n" +
+                "      {\n" +
+                "        previousMove = \"up\";\n" +
+                "        currRow--; //<>//\n" +
+                "      }\n" +
+                "      else\n" +
+                "      {\n" +
+                "        currRow++;\n" +
+                "      }\n" +
+                "    }\n" +
+                "    else if (isDownPressed)\n" +
+                "    {\n" +
+                "      if (!previousMove.equals(\"up\"))\n" +
+                "      {\n" +
+                "        previousMove = \"down\";\n" +
+                "        currRow++;\n" +
+                "      }\n" +
+                "      else\n" +
+                "      {\n" +
+                "        currRow--;\n" +
+                "      }\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void validateSnakeLocation()\n" +
+                "{\n" +
+                "  if (isSnakeOnItself())\n" +
+                "  {\n" +
+                "    gameOver = true;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "boolean isSnakeOnItself()\n" +
+                "{\n" +
+                "  return false;\n" +
+                "}\n" +
+                "\n" +
+                "void drawFood()\n" +
+                "{\n" +
+                "  if (!foodPresent)\n" +
+                "  {\n" +
+                "    foodRow = int(random(maxRows));\n" +
+                "    foodCol = int(random(maxCols));\n" +
+                "    while (isFoodOnSnake())\n" +
+                "    {\n" +
+                "      foodRow = int(random(maxRows)); //<>//\n" +
+                "      foodCol = int(random(maxCols));\n" +
+                "    }\n" +
+                "    foodPresent = true;\n" +
+                "  }\n" +
+                "  fill(#FF0000);\n" +
+                "  translate(offsetX + foodCol * colGap, offsetY + foodRow * rowGap);\n" +
+                "  square(0, 0, 25);\n" +
+                "  translate(-(offsetX + foodCol * colGap), -(offsetY + foodRow * rowGap));\n" +
+                "}\n" +
+                "\n" +
+                "boolean isFoodOnSnake()\n" +
+                "{\n" +
+                "  return false;\n" +
+                "}\n" +
+                "\n" +
+                "void checkFood()\n" +
+                "{\n" +
+                "  if (currCol == foodCol && currRow == foodRow)\n" +
+                "  {\n" +
+                "    //println(\"Ate food!\");\n" +
+                "    foodPresent = false;\n" +
+                "    len = len + 1;\n" +
+                "    score = score + 100;\n" +
+                "    snakeRows.append(snakeRows.get(snakeRows.size() - 1));\n" +
+                "    snakeCols.append(snakeCols.get(snakeCols.size() - 1));\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void keyPressed()\n" +
+                "{\n" +
+                "  // clear key presses so the last key pressed is the current key\n" +
+                "  isLeftPressed = false;\n" +
+                "  isRightPressed = false;\n" +
+                "  isUpPressed = false;\n" +
+                "  isDownPressed = false;\n" +
+                "  \n" +
+                "  if (key == CODED && keyCode == 37) {\n" +
+                "    isLeftPressed = true;\n" +
+                "    //println(\"Left\");\n" +
+                "  } else if (key == CODED && keyCode == 39) {\n" +
+                "    isRightPressed = true;\n" +
+                "    //println(\"Right\");\n" +
+                "  } else if (key == CODED && keyCode == 38) {\n" +
+                "    isUpPressed = true;\n" +
+                "    //println(\"Up\");\n" +
+                "  } else if (key == CODED && keyCode == 40) {\n" +
+                "    isDownPressed = true;\n" +
+                "    //println(\"Down\");\n" +
+                "  }\n" +
+                "}\n"
+            ).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
     <h5>Week 24 - Beginning Snake</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard24()">Starter Code</button>
     <br>
