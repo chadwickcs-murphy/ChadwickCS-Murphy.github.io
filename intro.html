@@ -39,12 +39,12 @@
     <button title="Copy code to clipboard" onclick="copyToClipboard25()">Starter Code</button>
     <br>
     <ul>
-        <li><a href="https://processing.org/reference/IntList.html" target="_blank">IntList</a></li>
-        <li><a href="https://processing.org/reference/IntList_size_.html" target="_blank">.size()</a></li>
-        <li><a href="https://processing.org/reference/IntList_add_.html" target="_blank">.add(<i>index</i>, <i>value</i>)</a></li>
-        <li><a href="https://processing.org/reference/IntList_append_.html" target="_blank">.append(<i>value</i>)</a></li>
-        <li><a href="https://processing.org/reference/IntList_get_.html" target="_blank">.get(<i>index</i>)</a></li>
-        <li><a href="https://processing.org/reference/IntList_set_.html" target="_blank">.set(<i>index</i>, <i>value</i>)</a></li>
+        <li><a href="https://processing.org/reference/ArrayList.html" target="_blank">ArrayList</a></li>
+        <li>.size()</li>
+        <li>.add(<i>index</i>, <i>value</i>) - inserts value at index</li>
+        <li>.add(<i>value</i>) - appends value to list</li>
+        <li>.get(<i>index</i>)</li>
+        <li>.set(<i>index</i>, <i>value</i>)</li>
     </ul>
 
     <script>
@@ -66,8 +66,8 @@
                 "int currRow = maxRows / 2;\n" +
                 "int currCol = maxCols / 2;\n" +
                 "String previousMove = \"none\";\n" +
-                "IntList snakeCols;\n" +
-                "IntList snakeRows;\n" +
+                "ArrayList<Integer> snakeCols;\n" +
+                "ArrayList<Integer> snakeRows;\n" +
                 "\n" +
                 "boolean foodPresent = false;\n" +
                 "int foodCol;\n" +
@@ -81,16 +81,16 @@
                 "void setup()\n" +
                 "{\n" +
                 "  size(850, 600);\n" +
-                "  snakeRows = new IntList();\n" +
-                "  snakeRows.append(currRow);\n" +
-                "  snakeRows.append(currRow);\n" +
-                "  snakeRows.append(currRow);\n" +
-                "  snakeRows.append(currRow);\n" +
-                "  snakeCols = new IntList();\n" +
-                "  snakeCols.append(currCol);\n" +
-                "  snakeCols.append(currCol);\n" +
-                "  snakeCols.append(currCol);\n" +
-                "  snakeCols.append(currCol);\n" +
+                "  snakeRows = new ArrayList<Integer>();\n" +
+                "  snakeRows.add(currRow);\n" +
+                "  snakeRows.add(currRow);\n" +
+                "  snakeRows.add(currRow);\n" +
+                "  snakeRows.add(currRow);\n" +
+                "  snakeCols = new ArrayList<Integer>();\n" +
+                "  snakeCols.add(currCol);\n" +
+                "  snakeCols.add(currCol);\n" +
+                "  snakeCols.add(currCol);\n" +
+                "  snakeCols.add(currCol);\n" +
                 "}\n" +
                 "\n" +
                 "void draw()\n" +
@@ -303,8 +303,6 @@
                 "    foodPresent = false;\n" +
                 "    len = len + 1;\n" +
                 "    score = score + 100;\n" +
-                "    snakeRows.append(snakeRows.get(snakeRows.size() - 1));\n" +
-                "    snakeCols.append(snakeCols.get(snakeCols.size() - 1));\n" +
                 "  }\n" +
                 "}\n" +
                 "\n" +
@@ -329,7 +327,7 @@
                 "    isDownPressed = true;\n" +
                 "    //println(\"Down\");\n" +
                 "  }\n" +
-                "}\n"
+                "}"
             ).then(() => {
                 alert("Code copied to clipboard!");
             }).catch(err => {
