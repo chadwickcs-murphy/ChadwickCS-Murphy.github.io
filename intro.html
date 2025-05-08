@@ -35,6 +35,193 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
+    <h5>Week 27 - Tic Tac Toe</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard27()">Starter Code</button>
+    <br>
+    <ul>
+        <li><a href="https://processing.org/reference/String_equals_.html" target="_blank"><i>str1</i>.equals(<i>str2</i>)</a> - Compares two strings to see if they are the same</li>
+    </ul>
+
+    <script>
+        function copyToClipboard27() {
+            navigator.clipboard.writeText(
+                "String[][] board = {{\"\", \"\", \"\"},\n" +
+                "                    {\"\", \"\", \"\"},\n" +
+                "                    {\"\", \"\", \"\"}};\n" +
+                "int[] rowY = {175, 400, 625};\n" +
+                "int[] colX = {175, 400, 625};\n" +
+                "\n" +
+                "int turn = 0;\n" +
+                "String whoseTurn = \"X\";\n" +
+                "int mouseRow = -1;\n" +
+                "int mouseCol = -1;\n" +
+                "boolean validLocation = false;\n" +
+                "boolean gameOver = false;\n" +
+                "int gameOverTimer = 0;\n" +
+                "\n" +
+                "int playerXWins = 0;\n" +
+                "int playerOWins = 0;\n" +
+                "int ties = 0;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(800, 900);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "  drawGrid();\n" +
+                "  drawSymbols();\n" +
+                "  \n" +
+                "  if (gameOver)\n" +
+                "  {\n" +
+                "    resetGame();\n" +
+                "  }\n" +
+                "  else\n" +
+                "  {\n" +
+                "    takeTurn();\n" +
+                "  }\n" +
+                "\n" +
+                "  printScore();\n" +
+                "}\n" +
+                "\n" +
+                "void drawGrid()\n" +
+                "{\n" +
+                "  rectMode(CENTER);\n" +
+                "  fill(#FFFFFF);\n" +
+                "  rect(400, 400, 650, 650);\n" +
+                "  fill(#000000);\n" +
+                "  for (int row = 0; row < 3; row++)\n" +
+                "  {\n" +
+                "    for (int col = 0; col < 3; col++)\n" +
+                "    {\n" +
+                "      square(colX[col], rowY[row], 210);\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "// Draw all the symbols on the board.\n" +
+                "void drawSymbols()\n" +
+                "{\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "// Draw one symbol in one square in the specified color.\n" +
+                "void drawSymbol(String letter, int row, int col, color drawColor)\n" +
+                "{\n" +
+                "  fill(drawColor);\n" +
+                "  textSize(250);\n" +
+                "  textAlign(CENTER, CENTER);\n" +
+                "  text(letter, colX[col], rowY[row] - 5);\n" +
+                "}\n" +
+                "\n" +
+                "void resetGame()\n" +
+                "{\n" +
+                "  gameOverTimer++;\n" +
+                "  if (gameOverTimer > 100)\n" +
+                "  {\n" +
+                "    gameOver = false;\n" +
+                "    gameOverTimer = 0;\n" +
+                "    turn = 0;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void takeTurn()\n" +
+                "{\n" +
+                "  mouseRow = -1;\n" +
+                "  mouseCol = -1;\n" +
+                "  for (int row = 0; row < 3; row++)\n" +
+                "  {\n" +
+                "    if (abs(rowY[row] - mouseY) < 100)\n" +
+                "    {\n" +
+                "      mouseRow = row;\n" +
+                "    }\n" +
+                "  }\n" +
+                "  for (int col = 0; col < 3; col++)\n" +
+                "  {\n" +
+                "    if (abs(colX[col] - mouseX) < 100)\n" +
+                "    {\n" +
+                "      mouseCol = col;\n" +
+                "    }\n" +
+                "  }\n" +
+                "  \n" +
+                "  if (mouseRow == -1 || mouseCol == -1)\n" +
+                "  {\n" +
+                "    validLocation = false;\n" +
+                "    fill(#444444);\n" +
+                "  }\n" +
+                "  else if (board[mouseRow][mouseCol].equals(\"\"))\n" +
+                "  {\n" +
+                "    validLocation = true;\n" +
+                "    fill(#00FF00);\n" +
+                "  }\n" +
+                "  else\n" +
+                "  {\n" +
+                "    validLocation = false;\n" +
+                "    fill(#FF0000);\n" +
+                "  }\n" +
+                "  textSize(250);\n" +
+                "  textAlign(CENTER, CENTER);\n" +
+                "  text(whoseTurn, mouseX, mouseY);\n" +
+                "}\n" +
+                "\n" +
+                "void mouseReleased()\n" +
+                "{\n" +
+                "  if (validLocation && !gameOver)\n" +
+                "  {\n" +
+                "    turn++;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "boolean checkForWin()\n" +
+                "{\n" +
+                "  if (rowWin() || columnWin() || diagonalWin())\n" +
+                "  {\n" +
+                "    gameOver = true;\n" +
+                "    return true;\n" +
+                "  }\n" +
+                "  else\n" +
+                "  {\n" +
+                "    return false;\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "boolean rowWin()\n" +
+                "{\n" +
+                "  return false;\n" +
+                "}\n" +
+                "\n" +
+                "boolean columnWin()\n" +
+                "{\n" +
+                "  return false;\n" +
+                "}\n" +
+                "\n" +
+                "boolean diagonalWin()\n" +
+                "{\n" +
+                "  return false;\n" +
+                "}\n" +
+                "\n" +
+                "void printScore()\n" +
+                "{\n" +
+                "  fill(#FFFFFF);\n" +
+                "  textSize(30);\n" +
+                "  textAlign(CENTER, TOP);\n" +
+                "  text(\"Player X\", 200, 775);\n" +
+                "  text(\"Tie\", 400, 775);\n" +
+                "  text(\"Player O\", 600, 775);\n" +
+                "  text(playerXWins, 200, 825);\n" +
+                "  text(ties, 400, 825);\n" +
+                "  text(playerOWins, 600, 825);\n" +
+                "}\n"
+            ).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
     <h5>Week 25 - Snake Round II</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard25()">Starter Code</button>
     <br>
