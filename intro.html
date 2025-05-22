@@ -35,15 +35,60 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
-    <h5>Week 27 - Tic Tac Toe</h5>
-    <button title="Copy code to clipboard" onclick="copyToClipboard27()">Starter Code</button>
+    <h5>Week 31 - Hangman</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard31()">Starter Code</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard31() {
+            navigator.clipboard.writeText(
+                "int maxIncorrectGuesses = 10;\n" +
+                "int incorrectGuesses = 0;\n" +
+                "int timer = 0;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(800, 900);\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  timer++;\n" +
+                "  if (timer > 100)\n" +
+                "  {\n" +
+                "    timer = 0;\n" +
+                "    incorrectGuesses++;\n" +
+                "  }\n" +
+                "  drawGallows();\n" +
+                "  drawPerson();\n" +
+                "}\n" +
+                "\n" +
+                "void drawGallows()\n" +
+                "{\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "void drawPerson()\n" +
+                "{\n" +
+                "  print(incorrectGuesses);\n" +
+                "}"
+            ).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
+    <h5>Week 29 - Tic Tac Toe</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard29()">Starter Code</button>
     <br>
     <ul>
         <li><a href="https://processing.org/reference/String_equals_.html" target="_blank"><i>str1</i>.equals(<i>str2</i>)</a> - Compares two strings to see if they are the same</li>
     </ul>
 
     <script>
-        function copyToClipboard27() {
+        function copyToClipboard29() {
             navigator.clipboard.writeText(
                 "String[][] board = {{\"\", \"\", \"\"},\n" +
                 "                    {\"\", \"\", \"\"},\n" +
