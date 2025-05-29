@@ -35,6 +35,161 @@
     </ul>
     <h3>Processing Commands</h3>
     <p>This is a list of the Processing commands we have learned in this course.  Also, starter code is provided for weekly activities.</p>
+    <h5>Week 32 - Hangman Finale</h5>
+    <button title="Copy code to clipboard" onclick="copyToClipboard32()">Starter Code</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard32() {
+            navigator.clipboard.writeText(
+                "String[] wordBank = {  \n" +
+                "  \"APPLE\", \"BALL\", \"CAT\", \"DOG\", \"ELEPHANT\", \"FISH\", \"GIRAFFE\", \"HOUSE\", \"ICE\", \"JELLY\",  \n" +
+                "  \"KITE\", \"LION\", \"MONKEY\", \"NOTE\", \"ORANGE\", \"PENGUIN\", \"QUEEN\", \"RABBIT\", \"SNAKE\", \"TURTLE\",  \n" +
+                "  \"UMBRELLA\", \"VASE\", \"WHALE\", \"XRAY\", \"YACHT\", \"ZEBRA\", \"BANANA\", \"CHERRY\", \"DOLPHIN\", \"EAGLE\",  \n" +
+                "  \"FLAMINGO\", \"GRAPES\", \"HAT\", \"ISLAND\", \"JACKET\", \"KANGAROO\", \"LEMON\", \"MANGO\", \"NEST\", \"OCTOPUS\",  \n" +
+                "  \"PIANO\", \"QUILT\", \"ROBOT\", \"SUN\", \"TREE\", \"UNICORN\", \"VOLCANO\", \"WOLF\", \"XYLOPHONE\", \"YOGURT\",  \n" +
+                "  \"ZEPPELIN\", \"ACTOR\", \"BUTTERFLY\", \"CAMEL\", \"DESK\", \"EARTH\", \"FLOWER\", \"GUITAR\", \"HELICOPTER\", \"IGLOO\",  \n" +
+                "  \"JEWEL\", \"KOALA\", \"LAMP\", \"MOUNTAIN\", \"NIGHT\", \"OCEAN\", \"PUZZLE\", \"QUOKKA\", \"ROSE\", \"STAR\",  \n" +
+                "  \"TRAIN\", \"UKULELE\", \"VEHICLE\", \"WINDOW\", \"XENOPS\", \"YELLOW\", \"ZUCCHINI\", \"BEACH\", \"CACTUS\", \"DRUM\",  \n" +
+                "  \"FOREST\", \"GLOBE\", \"HONEY\", \"ICEBERG\", \"JUNGLE\", \"KEY\", \"LIGHTHOUSE\", \"MOON\", \"NOTEBOOK\", \"OWL\",  \n" +
+                "  \"PUMPKIN\", \"QUILL\", \"RAIN\", \"SNOW\", \"TEAPOT\", \"VIOLET\", \"WINDMILL\", \"YAK\", \"ZIPPER\"  \n" +
+                "};\n" +
+                "\n" +
+                "int maxIncorrectGuesses = 7;\n" +
+                "int incorrectGuesses = 0;\n" +
+                "String gameWord;\n" +
+                "String guessedWord;\n" +
+                "String currentLetter;\n" +
+                "String incorrectLetters;\n" +
+                "boolean gameWon;\n" +
+                "boolean gameLost;\n" +
+                "String message;\n" +
+                "int messageTimer;\n" +
+                "\n" +
+                "void setup()\n" +
+                "{\n" +
+                "  size(800, 900);\n" +
+                "  initializeGame();\n" +
+                "}\n" +
+                "\n" +
+                "void draw()\n" +
+                "{\n" +
+                "  background(#000000);\n" +
+                "\n" +
+                "  drawGallows();\n" +
+                "  drawPerson();\n" +
+                "  displayGuess();\n" +
+                "  displayMessage();\n" +
+                "}\n" +
+                "\n" +
+                "void initializeGame()\n" +
+                "{\n" +
+                "  // Initialize variables\n" +
+                "  incorrectGuesses = 0;\n" +
+                "  incorrectLetters = \"\";\n" +
+                "  gameLost = false;\n" +
+                "  gameWon = false;\n" +
+                "  message = \"\";\n" +
+                "  messageTimer = 0;\n" +
+                "\n" +
+                "  // Choose random word\n" +
+                "  int randomNumber = int(random(wordBank.length));\n" +
+                "  gameWord = wordBank[randomNumber];\n" +
+                "\n" +
+                "  // Setup to start guessing\n" +
+                "  guessedWord = \"\";\n" +
+                "  for (int i = 0; i < gameWord.length(); i++)\n" +
+                "  {\n" +
+                "    guessedWord += \"_\";\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void displayGuess()\n" +
+                "{\n" +
+                "  textSize(75);\n" +
+                "  textAlign(CENTER, CENTER);\n" +
+                "  fill(#FFFFFF);\n" +
+                "\n" +
+                "  int offset = (width - (guessedWord.length() - 1) * 50) / 2;\n" +
+                " \n" +
+                "  for (int i = 0; i < guessedWord.length(); i++)\n" +
+                "  {\n" +
+                "    text(guessedWord.substring(i, i + 1), 50 * i + offset, 600);\n" +
+                "  }\n" +
+                "\n" +
+                "  textSize(50);\n" +
+                "  fill(#FF0000);\n" +
+                "  text(incorrectLetters, width / 2, 700);\n" +
+                "}\n" +
+                "\n" +
+                "void displayMessage()\n" +
+                "{\n" +
+                "  if (!message.equals(\"\"))\n" +
+                "  {\n" +
+                "    textSize(50);\n" +
+                "    textAlign(CENTER, CENTER);\n" +
+                "    fill(#FFFFFF);\n" +
+                "    text(message, width / 2, 775);\n" +
+                "   \n" +
+                "    messageTimer++;\n" +
+                "    if (messageTimer > 200)\n" +
+                "    {\n" +
+                "      message = \"\";\n" +
+                "      messageTimer = 0;\n" +
+                "      if (gameLost || gameWon)\n" +
+                "      {\n" +
+                "        initializeGame();\n" +
+                "      }\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void keyTyped()\n" +
+                "{\n" +
+                "  if (!gameWon && !gameLost)\n" +
+                "  {\n" +
+                "    currentLetter = \"\" + key;\n" +
+                "    currentLetter = currentLetter.toUpperCase();\n" +
+                "    if (letterAlreadyUsed() == false)\n" +
+                "    {\n" +
+                "      checkLetterAgainstWord();\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "boolean letterAlreadyUsed()\n" +
+                "{\n" +
+                "  return false;\n" +
+                "}\n" +
+                "\n" +
+                "void checkLetterAgainstWord()\n" +
+                "{\n" +
+                "  boolean incorrectGuess = true;\n" +
+                "  for (int i = 0; i < gameWord.length(); i++)\n" +
+                "  {\n" +
+                "    if (currentLetter.equals(gameWord.substring(i, i + 1)))\n" +
+                "    {\n" +
+                "      guessedWord = guessedWord.substring(0, i) +\n" +
+                "                    currentLetter +\n" +
+                "                    guessedWord.substring(i + 1);\n" +
+                "      incorrectGuess = false;\n" +
+                "      checkForWin();\n" +
+                "    }\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "void checkForWin()\n" +
+                "{\n" +
+                " \n" +
+                "}\n"
+            ).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+
     <h5>Week 31 - Hangman</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard31()">Starter Code</button>
     <br><br>
