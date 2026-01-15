@@ -2256,8 +2256,8 @@
             });
         }
     </script>
-
-    <h5>Week 13 - More Paddle Ball</h5>
+-->
+    <h5>Week 12 - More Paddle Ball</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard13()">Starter Code</button>
     <ul>
         <li><a href="https://processing.org/reference/text_.html" target="_blank">text</a>(<i>string</i>, <i>leftX</i>, <i>bottomY</i>)</li>
@@ -2398,7 +2398,7 @@
                 "  // the ball strikes the paddle\n" +
                 "  if (bounce) {\n" +
                 "    ballSpeedY = -ballSpeedY;\n" +
-                "    ballSpeedX = ballSpeedX + (ballX - mouseX) / (paddleW / 2);\n" +
+                "        ballSpeedX = ballSpeedX + (ballX + (ballSize / 2) - mouseX) / (paddleW / 2);\n" +
                 "  }\n" +
                 "}\n" +
                 " \n" +
@@ -2514,7 +2514,7 @@
             });
         }
     </script>
--->
+
     <h5>Week 11 - Paddle Ball</h5>
     <button title="Copy code to clipboard" onclick="copyToClipboard12()">Starter Code</button>
     <br><br>
